@@ -72,12 +72,6 @@ THE SOFTWARE.
 
         document.addEventListener("wheel", (event) => {
             var wheeling
-            const collection = document.getElementsByClassName("card");
-            for (var i = 0; i < collection.length; i++){
-                console.log(collection[i])
-                collection[i].classList.add("card_animation")
-                collection[i].style.display = 'inline-flex'
-            }
             clearTimeout(wheeling);
             const buttons = document.getElementsByTagName('button')
             wheeling = setTimeout(function() {
@@ -85,28 +79,37 @@ THE SOFTWARE.
                 Array.from(buttons).forEach(function(button) {
                     const id = button.id.split('_')[0]
                     const el = document.getElementById(id)
-                    if (el.id == "projects"){
-                        const collection = document.getElementsByClassName("demo-wrapper");
-                        for (var i = 0; i < collection.length; i++){
-                            collection[i].classList.add("project_animation");
-                            collection[i].style.display = 'inline-block';
-                        }
-                        const newcollection = document.getElementsByClassName("nodemo-wrapper");
-                        for (var i = 0; i < newcollection.length; i++){
-
-                            newcollection[i].classList.add("project_animation");
-                            newcollection[i].style.display = 'inline-block';
-                        }
-
-                    };
 
                     button.style.background = 'None'
                     if (isInViewport(el)){
+
+                        if (el.id == "experiences"){
+                            const collection = document.getElementsByClassName("card");
+                            for (var i = 0; i < collection.length; i++){
+                                console.log(collection[i]);
+                                collection[i].classList.add("card_animation");
+                                collection[i].style.display = 'inline-flex';
+                            }
+                        };
+
+                        if (el.id == "projects"){
+                            const collection = document.getElementsByClassName("demo-wrapper");
+                            for (var i = 0; i < collection.length; i++){
+                                collection[i].classList.add("project_animation");
+                                collection[i].style.display = 'inline-block';
+                            }
+                            const newcollection = document.getElementsByClassName("nodemo-wrapper");
+                            for (var i = 0; i < newcollection.length; i++){
+
+                                newcollection[i].classList.add("project_animation");
+                                newcollection[i].style.display = 'inline-block';
+                            }
+
+                        };
                         button.style.background = el.style.background
-                    
                     }
                 })
-            }, 1000);
+            }, 400);
         });
     </script>
 
@@ -169,7 +172,7 @@ THE SOFTWARE.
     </script>
     <div class="container" id="container">
         <header id="header">
-            <button id="home_button" style="background: black" onClick="navigateTo(home)" >Home</button>
+            <button id="home_button" style="background: #1B262C" onClick="navigateTo(home)" >Home</button>
             <button id="experiences_button" onClick="navigateTo(experiences)">Experiences</button>
             <button id="projects_button" onClick="navigateTo(projects)">Projects</button>
         </header>
@@ -203,19 +206,26 @@ THE SOFTWARE.
             <div class="personal-info">
                 <div>
                     <p class="home-title">{{ info['Name'] }}</p>
-                    <div class="links-wrapper">
-                    <div class="links-list">
-                        <div class="link-holder" style="height: 30px; width: 30px">
-                            <a href={{ info['Links']['LinkedIn'] }}><img src="static/imgs/linkedin.png" style="width: 30px; height: 30px"></a>
+                    <div class="link-button-wrapper">
+                        <div class="links-wrapper">
+                            <div class="links-list">
+                                <div class="link-holder" style="height: 30px; width: 30px">
+                                    <a href={{ info['Links']['LinkedIn'] }}><img src="static/imgs/linkedin.png" style="width: 30px; height: 30px"></a>
+                                </div>
+                                <div class="link-holder" style="height: 30px; width: 30px">
+                                    <a href={{ info['Links']['Github'] }}><img src="static/imgs/github.png" style="width: 30px; height: 30px"></a>
+                                </div>
+                                <div class="link-holder" style="height: 30px; width: 30px">
+                                    <a href={{ info['Links']['Instagram'] }}><img src="static/imgs/instagram.png" style="width: 30px; height: 30px"></a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="link-holder" style="height: 30px; width: 30px">
-                            <a href={{ info['Links']['Github'] }}><img src="static/imgs/github.png" style="width: 30px; height: 30px"></a>
-                        </div>
-                        <div class="link-holder" style="height: 30px; width: 30px">
-                            <a href={{ info['Links']['Instagram'] }}><img src="static/imgs/instagram.png" style="width: 30px; height: 30px"></a>
+                        <div class="button-wrapper">
+                            <div class="contact-button" onclick="window.location.href='mailto:xtcpetecgl@gmail.com';">
+                                CONTACT ME
+                            </div>
                         </div>
                     </div>
-                </div>
                     <div class="highlight"><h4>{{ info['Hightlight'] }}</h4></div>
                 </div>
                 <div class="education-wrapper">
@@ -232,6 +242,7 @@ THE SOFTWARE.
             </div>
             </div>
             <div class="animated-cloud"></div>
+
         </section>
 
 
