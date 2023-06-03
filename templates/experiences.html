@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/experiences.css') }}">
+    <title>{{ summary['Title'] }}</title>
+</head>
+<body>
+    <div class="container">
+        <div class="banner-holder">
+            <div class="banner">
+                <img src="{{ '../' ~summary['imgPath'] }}" style="width: fit-content; height: 40vh">
+            </div>
+        </div>
+        <div class="content-holder">
+            <div class="inner-content">
+                <div class="header">
+                    <div class="title">{{ summary['Title'] }}
+                        <div class="comment" style="font-weight: normal; font-size: 0.7em">{{ summary['Comment'] }}</div>
+                    </div>
+                    <div class="company">{{ summary['Company'] }}
+                        <div class="date">{{ summary['Date'] }}</div>
+                    </div>
+                </div>
+                <div class="detail-holder">
+                    <div class="summary-holder">
+                        <div class="summary">
+                            <div class="summary-title">Description:</div>
+                            {% for i in data['Summary'] %}
+                            <div class="summary-point">
+                                * {{ data['Summary'][i] }}
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div class="skill-holder">
+                        <div class="skill-title">Skills:</div>
+                        <div class="skills">
+                            {% for skill in summary['Skills'].split(',') %}
+                                <div class="skill", id="{{ skill }}" onclick="location.href='{{ 'https://www.google.com/search?q=' ~ skill.lower() }}'">
+                                    <i><u>{{ skill }}</u></i>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                {% if 'Supervisor' in data %}
+                <div class="supervisor-holder">
+                    <div class="supervisor-title">My Supervisor:</div>
+                    <div class="supervisor-name">{{ data['Supervisor']['Name'] }}</div>
+                    <div class="email">Email: <a href="mailto:{{ data['Supervisor']['Email'] }}">{{ data['Supervisor']['Email'] }}</a></div>
+                </div>
+                {% endif %}
+
+                {% if 'About' in data %}
+                    <div class="about-holder">
+                        <div class="about-title">About the company/lab/work: </div>
+                        <div class="about">{{ data['About'] }}</div>
+                    </div>
+                {% endif %}
+
+                {% if 'Reference' in data %}
+                    <div class="supportive-holder">
+                        <div class="supportive-title">{{ data['Reference']['Description'] }}: </div>
+                        <div class="supportive-description">{{ data['Reference']['Description'] }}</div>
+                        <div class="supportive-file-holder">
+                            <img src="{{ '../' ~data['Reference']['imgPath'] }}" style="width: 50%">
+                        </div>
+                    </div>
+                {% endif %}
+
+                {% if 'Additional' in data %}
+                    <div class="supportive-holder">
+                        <div class="supportive-title">{{ data['Additional']['Title'] }}: </div>
+                        <div class="supportive-description">{{ data['Additional']['Description'] }}</div>
+                        <div class="supportive-file-holder">
+                            <img src="{{ '../' ~data['Additional']['imgPath'] }}" style="width: 50%">
+                        </div>
+                    </div>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
