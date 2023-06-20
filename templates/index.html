@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/index.css') }}">
-    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
         /*
 Copyright (c) 2017 Niklas Knaack
@@ -81,6 +81,7 @@ THE SOFTWARE.
                     const el = document.getElementById(id)
 
                     button.style.background = 'None'
+                    button.style.color = 'gray'
                     if (isInViewport(el)){
 
                         if (el.id == "experiences"){
@@ -107,6 +108,7 @@ THE SOFTWARE.
 
                         };
                         button.style.background = el.style.background
+                        button.style.color = 'white'
                     }
                 })
             }, 400);
@@ -146,8 +148,10 @@ THE SOFTWARE.
                 if (el.id == button.id.split('_')[0]) {
                     console.log(el.style.background)
                     button.style.background = el.style.background
+                    button.style.color = 'white'
                 } else {
                     button.style.background = 'None'
+                    button.style.color = 'gray'
                 }
             })
         }
@@ -171,11 +175,11 @@ THE SOFTWARE.
        }
     </script>
     <div class="container" id="container">
-        <header id="header">
-            <button id="home_button" style="background: #1B262C" onClick="navigateTo(home)" >Home</button>
+        <div class="header">
+            <button id="home_button" style="background: #1B262C; color: white" onClick="navigateTo(home)" >Home</button>
             <button id="experiences_button" onClick="navigateTo(experiences)">Experiences</button>
             <button id="projects_button" onClick="navigateTo(projects)">Projects</button>
-        </header>
+        </div>
 
 
         <section id="home" style="background: #1B262C">

@@ -8,13 +8,30 @@ body{
     margin: 0;
 }
 
+.header{
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    margin: 0;
+    background-color: whitesmoke;
+    opacity: 0.8;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
 button{
-    color: white;
+    color: gray;
     font-size: medium;
-    margin: auto;
     border: none;
     background: transparent;
     padding: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .container{
