@@ -369,6 +369,7 @@ section{
 .personal-info{
     position: absolute;
     bottom: 8%;
+    bottom: 8%;
     margin-left: 6%;
     color: #EEEEEE;
     z-index: 1;
@@ -379,6 +380,11 @@ section{
     margin-bottom: 10px;
     font-size: 2.6em;
     font-weight: bolder;
+}
+
+.highlight{
+    font-size: 1.4em;
+    margin-bottom: 15px;
 }
 
 .links-wrapper{
@@ -437,7 +443,7 @@ h2{
     font-weight: bolder;
     border-radius: 20px;
     margin-bottom: 15px;
-    animation: shake 2.5s infinite;
+    animation: shake 4s infinite;
 }
 .contact-button:hover{
     animation: none;
@@ -452,7 +458,8 @@ h2{
 }
 
 .p{
-   margin-left: 30px;
+    margin-left: 30px;
+    font-size: 1.3em;
 }
 
 .dotline{
@@ -483,8 +490,14 @@ h2{
 .text {
     display: block;
     color: darkgray;
-    font-size: 17px;
+    font-size: 18px;
 }
+
+.profile_image{
+    border-radius: 25px;
+    border: 10px;
+}
+
 
 .experience-title{
     color: #F4EEFF;
@@ -531,15 +544,14 @@ h2{
   animation: card-ani 1.2s linear;
 }
 .card {
-    display: none;
+    display: inline-flex;
     position: relative;
     height: 90%;
     width: 25em;
     border-radius: 20px;
     margin-right: 30px;
     margin-top: 30px;
-    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
-    transition: opacity 0.2s ease, box-shadow 0.2s ease, transform 330ms ease-in-out;;
+    transition: opacity 0.2s ease, box-shadow 0.2s ease, transform 330ms ease-in-out;
     opacity: 1;
     z-index: 1;
     margin-bottom: 40px;
@@ -683,7 +695,7 @@ h2{
 }
 
 .demo-wrapper{
-    display: none;
+    display: inline-block;
     width: 42.5%;
     margin-left: 5%;
     margin-right: 0;
@@ -691,7 +703,7 @@ h2{
 }
 
 .nodemo-wrapper{
-    display: none;
+    display: inline-block;
     width: 42.5%;
     height: 100%;
     margin-left: 10%;
