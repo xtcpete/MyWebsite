@@ -94,7 +94,7 @@
                 if (_id[0] =='collection'){
                     const data = value
                     // New to change url later
-                    const link = 'http://www.xtcpete.com/admin/' + key + '.json'
+                    const link = 'https://www.xtcpete.com/admin/' + key + '.json'
                     console.log(link)
                     http.put(link, data).then(data => console.log(data)).catch(err => console.log(err));
                 }
@@ -103,7 +103,7 @@
                     const combined_id = _id.join('/')
                     const data = value
 
-                    const link = 'http://www.xtcpete.com/admin/' + combined_id + '/' + key + '.json'
+                    const link = 'https://www.xtcpete.com/admin/' + combined_id + '/' + key + '.json'
                     console.log(link)
                     console.log(data)
                     http.put(link, data).then(data => console.log(data)).catch(err => console.log(err));
