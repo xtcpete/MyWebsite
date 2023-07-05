@@ -776,7 +776,8 @@ h2{
     overflow: hidden;
     display: inline-block;
     position: relative;
-    height: 20vh;
+    height: fit-content;
+    padding-bottom: 20px;
     width: 100%;
     border-radius: 20px;
     margin-top: 20px;
