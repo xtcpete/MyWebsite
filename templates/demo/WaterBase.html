@@ -94,17 +94,19 @@
                 if (_id[0] =='collection'){
                     const data = value
                     const link = 'https://www.xtcpete.com/WaterBase/' + key + '.json'
+                    //const link = 'http://127.0.0.1:5000/WaterBase/' + key + '.json'
                     console.log(link)
-                    http.put(link, data).then(data => console.log(data)).catch(err => console.log(err));
+                    http.put(link, data).then(() => {window.location.reload()}).catch(err => console.log(err));
                 }
                 else{
                     _id.pop()
                     const combined_id = _id.join('/')
                     const data = value
                     const link = 'https://www.xtcpete.com/WaterBase/' + combined_id + '/' + key + '.json'
+                    //const link = 'http://127.0.0.1:5000/WaterBase/' + combined_id + '/' + key + '.json'
                     console.log(link)
                     console.log(data)
-                    http.put(link, data).then(data => console.log(data)).catch(err => console.log(err));
+                    http.put(link, data).then(() => {window.location.reload()}).catch(err => console.log(err));
                 }
 
 
@@ -115,9 +117,9 @@
                 console.log(_id)
                 var keys = _id.split('_')
                 const http = new EasyHTTP;
-
                 const link = 'https://www.xtcpete.com/WaterBase/' + keys.join('/') + '.json'
-                http.delete(link)
+                //const link = 'http://127.0.0.1:5000/WaterBase/' + keys.join('/') + '.json'
+                http.delete(link).then(() => {window.location.reload()})
             }
 
             function createCollectionElement (data){
@@ -175,7 +177,7 @@
             createCollectionElement(data)
 
             document.addEventListener('DOMContentLoaded', () => {
-                var socket = io.connect(location.protocol + '//' + document.domain + ':' + location.port);
+                const socket = io.connect(location.protocol + '//' + document.domain + ':' + location.port);
 
                 socket.on('update', (_data) => {
                     var collection = _data['collection'];

@@ -96,7 +96,7 @@
                     // New to change url later
                     const link = 'https://www.xtcpete.com/admin/' + key + '.json'
                     console.log(link)
-                    http.put(link, data).then(data => console.log(data)).catch(err => console.log(err));
+                    http.put(link, data).then(() => {window.location.reload()}).catch(err => console.log(err));
                 }
                 else{
                     _id.pop()
@@ -106,7 +106,7 @@
                     const link = 'https://www.xtcpete.com/admin/' + combined_id + '/' + key + '.json'
                     console.log(link)
                     console.log(data)
-                    http.put(link, data).then(data => console.log(data)).catch(err => console.log(err));
+                    http.put(link, data).then(() => {window.location.reload()}).catch(err => console.log(err));
                 }
 
 
@@ -119,7 +119,7 @@
                 const http = new EasyHTTP;
 
                 const link = 'https://www.xtcpete.com/admin/' + keys.join('/') + '.json'
-                http.delete(link)
+                http.delete(link).then(() => {window.location.reload()})
             }
 
             function createCollectionElement (data){

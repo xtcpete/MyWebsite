@@ -5,7 +5,7 @@ from flask_caching import Cache
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
 app.config['CACHE_TYPE'] = 'SimpleCache'
-socketio = SocketIO(app)
+socketio = SocketIO(app, cors_allowed_origins="*")
 cache = Cache(app)
 
 
