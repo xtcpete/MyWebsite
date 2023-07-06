@@ -28,7 +28,8 @@
 
                // Make an HTTP PUT Request
                 async put(url, data) {
-
+                    const ring = document.getElementById('ring')
+                    ring.style.display = 'block'
                     const response = await fetch(url, {
                         method: 'PUT',
                         headers: {
@@ -41,6 +42,8 @@
                 };
 
                 async delete(url){
+                    const ring = document.getElementById('ring')
+                    ring.style.display = 'block'
                     const response = await fetch(url,{
                         method: 'DELETE',
                         headers: {
@@ -169,6 +172,9 @@
     <br>
     <br>
     <button id="add-collection" onclick="addCollection()">+</button>
+    <div class="ring" id="ring" style="display: none">Updating
+      <span></span>
+    </div>
 
     <body>
         <script type = text/javascript>
