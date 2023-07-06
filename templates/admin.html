@@ -95,6 +95,7 @@
                     const data = value
                     // New to change url later
                     const link = 'https://www.xtcpete.com/admin/' + key + '.json'
+                    //const link = 'http://127.0.0.1:5000/admin/' + key + '.json'
                     console.log(link)
                     http.put(link, data).then(() => {window.location.reload()}).catch(err => console.log(err));
                 }
@@ -104,6 +105,7 @@
                     const data = value
 
                     const link = 'https://www.xtcpete.com/admin/' + combined_id + '/' + key + '.json'
+                    //const link = 'http://127.0.0.1:5000/admin/' + combined_id + '/' + key + '.json'
                     console.log(link)
                     console.log(data)
                     http.put(link, data).then(() => {window.location.reload()}).catch(err => console.log(err));
@@ -119,6 +121,7 @@
                 const http = new EasyHTTP;
 
                 const link = 'https://www.xtcpete.com/admin/' + keys.join('/') + '.json'
+                //const link = 'http://127.0.0.1:5000/admin/' + keys.join('/') + '.json'
                 http.delete(link).then(() => {window.location.reload()})
             }
 
