@@ -958,3 +958,13 @@ h2{
     z-index: 1;
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
+
+.end-note{
+    position: relative;
+    bottom: 5%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: small;
+    height: fit-content;
+}
