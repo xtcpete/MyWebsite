@@ -37,7 +37,7 @@
                 async put(url, data) {
                     const ring = document.getElementById('ring')
                     ring.style.display = 'block'
-                    const response = await fetch(url, {
+                    var response = await fetch(url, {
                         method: 'PUT',
                         headers: {
                             'Access-Control-Allow-Origin':'*',
@@ -46,18 +46,21 @@
                         body: data
                     });
 
+                    return response
+
                 };
 
                 async delete(url){
                     const ring = document.getElementById('ring')
                     ring.style.display = 'block'
-                    const response = await fetch(url,{
+                    var response = await fetch(url,{
                         method: 'DELETE',
                         headers: {
                             'Access-Control-Allow-Origin':'*',
                             'Content-type': 'application/json'
                         },
                     })
+                    return response
                 }
             };
 
@@ -106,7 +109,19 @@
                     const link = 'https://www.xtcpete.com/WaterBase/' + key + '.json'
                     //const link = 'http://127.0.0.1:5000/WaterBase/' + key + '.json'
                     console.log(link)
-                    http.put(link, data).then(() => {window.location.reload()}).catch(err => console.log(err));
+                    http.put(link, data).then((response) => {
+                        response.text().then(function (text) {
+                            console.log(text)
+                            if (text === '') {
+                                window.location.reload()
+                            } else {
+                                const ring = document.getElementById('ring')
+                                ring.style.display = 'none'
+                                window.alert(text)
+                                window.location.reload()
+                            }
+                        })
+                    }).catch(err => console.log(err));
                 }
                 else{
                     _id.pop()
@@ -114,9 +129,20 @@
                     const data = value
                     const link = 'https://www.xtcpete.com/WaterBase/' + combined_id + '/' + key + '.json'
                     //const link = 'http://127.0.0.1:5000/WaterBase/' + combined_id + '/' + key + '.json'
-                    console.log(link)
-                    console.log(data)
-                    http.put(link, data).then(() => {window.location.reload()}).catch(err => console.log(err));
+
+                    http.put(link, data).then((response) => {
+                        response.text().then(function (text) {
+                            console.log(text)
+                            if (text === '') {
+                                window.location.reload()
+                            } else {
+                                const ring = document.getElementById('ring')
+                                ring.style.display = 'none'
+                                window.alert(text)
+                                window.location.reload()
+                            }
+                        })
+                    }).catch(err => console.log(err));
                 }
 
 
@@ -129,7 +155,19 @@
                 const http = new EasyHTTP;
                 const link = 'https://www.xtcpete.com/WaterBase/' + keys.join('/') + '.json'
                 //const link = 'http://127.0.0.1:5000/WaterBase/' + keys.join('/') + '.json'
-                http.delete(link).then(() => {window.location.reload()})
+                http.delete(link).then((response) => {
+                        response.text().then(function (text) {
+                            console.log(text)
+                            if (text === '') {
+                                window.location.reload()
+                            } else {
+                                const ring = document.getElementById('ring')
+                                ring.style.display = 'none'
+                                window.alert(text)
+                                window.location.reload()
+                            }
+                        })
+                    })
             }
 
             function createCollectionElement (data){
