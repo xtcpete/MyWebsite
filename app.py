@@ -141,7 +141,6 @@ def WaterBase():
 
 
 @app.route('/WaterBase/<path:myPath>', methods=['PUT'])
-@cache.cached(timeout=50)
 def demo_put(myPath):
     return catch_all_put(db='demo', socketio=socketio)
 

@@ -37,7 +37,7 @@
                 async put(url, data) {
                     const ring = document.getElementById('ring')
                     ring.style.display = 'block'
-                    var response = await fetch(url, {
+                    const response = await fetch(url, {
                         method: 'PUT',
                         headers: {
                             'Access-Control-Allow-Origin':'*',
@@ -45,15 +45,13 @@
                         },
                         body: data
                     });
-
                     return response
-
                 };
 
                 async delete(url){
                     const ring = document.getElementById('ring')
                     ring.style.display = 'block'
-                    var response = await fetch(url,{
+                    const response = await fetch(url,{
                         method: 'DELETE',
                         headers: {
                             'Access-Control-Allow-Origin':'*',
@@ -118,7 +116,6 @@
                                 const ring = document.getElementById('ring')
                                 ring.style.display = 'none'
                                 window.alert(text)
-                                window.location.reload()
                             }
                         })
                     }).catch(err => console.log(err));
@@ -139,7 +136,6 @@
                                 const ring = document.getElementById('ring')
                                 ring.style.display = 'none'
                                 window.alert(text)
-                                window.location.reload()
                             }
                         })
                     }).catch(err => console.log(err));

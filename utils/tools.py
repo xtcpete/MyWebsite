@@ -3,6 +3,7 @@ import pymongo
 import string
 import random
 
+
 # create database
 class MongoDB():
     """
@@ -65,7 +66,7 @@ class RequestInfo():
                 self.operators[name] = value
 
 
-def catach_all_patch(db ='root', socketio=None):
+def catach_all_patch(db='root', socketio=None):
     request_info = RequestInfo(db)
     db = MongoDB(request_info.root_database).db
     # access the collection
@@ -102,7 +103,7 @@ def catach_all_patch(db ='root', socketio=None):
     return resp
 
 
-def catch_all_delete(db ='root', socketio=None):
+def catch_all_delete(db='root', socketio=None):
     request_info = RequestInfo(db)
 
     db = MongoDB(request_info.root_database).db
@@ -136,8 +137,7 @@ def catch_all_delete(db ='root', socketio=None):
     return resp
 
 
-
-def catch_all_post(db ='root',socketio=None):
+def catch_all_post(db='root', socketio=None):
     request_info = RequestInfo(db)
     db = MongoDB(request_info.root_database).db
     # access the collection
@@ -171,7 +171,7 @@ def catch_all_post(db ='root',socketio=None):
     return resp
 
 
-def catch_all_get(db ='root', socketio=None):
+def catch_all_get(db='root', socketio=None):
     request_info = RequestInfo(db)
 
     db = MongoDB(request_info.root_database).db
@@ -303,7 +303,7 @@ def catch_all_get(db ='root', socketio=None):
         return "Error: Add .json to the url"
 
 
-def catch_all_put(db ='root', socketio=None):
+def catch_all_put(db='root', socketio=None):
     request_info = RequestInfo(db)
     db = MongoDB(request_info.root_database).db
 
@@ -350,4 +350,3 @@ def catch_all_put(db ='root', socketio=None):
     resp = Response('')
     resp.headers['Access-Control-Allow-Origin'] = '*'
     return resp
-
