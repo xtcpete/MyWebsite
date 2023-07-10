@@ -1,20 +1,13 @@
 import requests
 
-with open('static/resume.txt') as f:
-    lines = f.readlines()
-
-resume = " ".join(lines)
-
 def get_chat_response(message):
     headers = {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer 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'
+        'Authorization': 'Bearer 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'
     }
 
     data = {
-        'messages': [{'role': 'system', 'content': 'You are Gonglin Chen. You will answer questions about youself.'+
-                                                   'Your resume is' +
-                                                   resume},
+        'messages': [{'role': 'system', 'content': 'You are a helpful assistant.'},
                      {'role': 'user', 'content': message}],
         'model': 'gpt-3.5-turbo'
     }
@@ -23,7 +16,10 @@ def get_chat_response(message):
     response_json = response.json()
 
     # Extract and return the model's response
-    return response_json['choices'][0]['message']['content']
+    try:
+        return response_json['choices'][0]['message']['content']
+    except:
+        return response_json
 
 while True:
     message = str(input("Enter your question"))

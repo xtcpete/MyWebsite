@@ -162,5 +162,17 @@ def demo_delete(myPath):
 def demo_patch(myPath):
     return catach_all_patch(db='demo', socketio=socketio)
 
+
+@app.route('/chat-api/', methods=['PUT'])
+def catch_all_chat():
+    message = request.get_data().decode('utf-8')
+    resp = get_chat_response(message)
+    return resp
+
+
+@app.route('/chat')
+def chat():
+    return render_template("chat.html")
+
 if __name__ == '__main__':
     socketio.run(app, debug=True)

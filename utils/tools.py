@@ -2,6 +2,7 @@ from flask import Flask, Response, request, render_template, jsonify, json
 import pymongo
 import string
 import random
+import requests
 
 
 # create database
@@ -350,3 +351,25 @@ def catch_all_put(db='root', socketio=None):
     resp = Response('')
     resp.headers['Access-Control-Allow-Origin'] = '*'
     return resp
+
+
+def get_chat_response(message):
+    headers = {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer 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'
+    }
+
+    data = {
+        'messages': [{'role': 'system', 'content': 'You are a helpful assistant.'},
+                     {'role': 'user', 'content': message}],
+        'model': 'gpt-3.5-turbo'
+    }
+
+    response = requests.post('https://api.openai.com/v1/chat/completions', headers=headers, json=data)
+    response_json = response.json()
+
+    # Extract and return the model's response
+    try:
+        return response_json['choices'][0]['message']['content']
+    except:
+        return response_json
