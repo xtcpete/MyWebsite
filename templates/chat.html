@@ -231,6 +231,8 @@
            messageWrapper.textContent = message;
 
            chatLog.appendChild(messageWrapper);
+
+           chatLog.scrollTo(0, chatLog.scrollHeight);
          }
 
          function generateAssistantMessage(userInput) {
