@@ -331,7 +331,7 @@ THE SOFTWARE.
                                 {% endif %}
                                 {% if 'Skills' in content %}
                                     <div class="skill-holder" style="display: inline">
-                                        <div class="skills" style="width: 100%; display: inline-block; font-size: 0.9em">
+                                        <div class="skills">
                                             Skills:
                                             {% for skill in content['Skills'].split(',') %}
                                                 <text class="skill", id="{{ skill }}" onclick="location.href='{{ 'https://www.google.com/search?q=' ~ skill.lower() }}'" style="width: fit-content; cursor: pointer">
