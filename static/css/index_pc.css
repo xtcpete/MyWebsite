@@ -1012,6 +1012,7 @@ h2{
 .end-note{
     position: relative;
     bottom: 5%;
+    z-index: 999;
     width: 100%;
     text-align: center;
     color: white;
