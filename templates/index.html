@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/index.css') }}">
+    <link rel= "stylesheet" type= "text/css" media="screen and (min-device-width:641px)" href= "{{ url_for('static',filename='css/index_pc.css') }}">
+    <link rel= "stylesheet" type= "text/css" media="screen and (max-device-width:640px)" href= "{{ url_for('static',filename='css/index_mobile.css') }}">
     <link rel="apple-touch-icon" sizes="180x180" href="../static/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon/favicon-16x16.png">
@@ -140,15 +141,31 @@ THE SOFTWARE.
             }
        }
 
+       function openMean(){
+           const el = document.getElementById('nev-page')
+           if (el.style.display == 'none'){
+               el.style.display = 'block'
+           }
+           else {
+               el.style.display = 'none'
+           }
+       }
+
     </script>
     <div class="container" id="container">
         <div class="header">
-            <button id="home_button" style="background: #1B262C; color: white" onClick="navigateTo(home)" >Home</button>
-            <button id="experiences_button" onClick="navigateTo(experiences)">Experiences</button>
-            <button id="projects_button" onClick="navigateTo(projects)">Projects</button>
+            <div class="header-text">XTCPETE</div>
+            <button class="header-button" id="home_button" style="background: #1B262C; color: white" onClick="navigateTo(home)" >Home</button>
+            <button class="header-button" id="experiences_button" onClick="navigateTo(experiences)">Experiences</button>
+            <button class="header-button" id="projects_button" onClick="navigateTo(projects)">Projects</button>
+            <div class="nev" onClick="openMean()">MENU</div>
         </div>
-
-
+        <div id="nev-page" style="display: none; height: 50%; width: 100%; z-index: 999; position: fixed;
+    top: 0; background: whitesmoke;">
+            <button class="nev-button" id="home_button" style="background: #1B262C; color: white" onClick="navigateTo(home)" >Home</button>
+            <button class="nev-button" id="experiences_button" onClick="navigateTo(experiences)">Experiences</button>
+            <button class="nev-button" id="projects_button" onClick="navigateTo(projects)">Projects</button>
+        </div>
         <section id="home" style="background: #1B262C">
             <div class="star1"></div>
             <div class="star2"></div>
@@ -181,14 +198,14 @@ THE SOFTWARE.
                     <div class="link-button-wrapper">
                         <div class="links-wrapper">
                             <div class="links-list">
-                                <div class="link-holder" style="height: 30px; width: 30px">
-                                    <a href={{ info['Links']['LinkedIn'] }}><img class='link-image' src="static/imgs/linkedin.png" style="width: 30px; height: 30px"></a>
+                                <div class="link-holder">
+                                    <a href={{ info['Links']['LinkedIn'] }}><img class='link-image' src="static/imgs/linkedin.png"></a>
                                 </div>
-                                <div class="link-holder" style="height: 30px; width: 30px">
-                                    <a href={{ info['Links']['Github'] }}><img class='link-image' src="static/imgs/github.png" style="width: 30px; height: 30px"></a>
+                                <div class="link-holder">
+                                    <a href={{ info['Links']['Github'] }}><img class='link-image' src="static/imgs/github.png"></a>
                                 </div>
-                                <div class="link-holder" style="height: 30px; width: 30px">
-                                    <a href={{ info['Links']['Instagram'] }}><img class='link-image' src="static/imgs/instagram.png" style="width: 30px; height: 30px"></a>
+                                <div class="link-holder">
+                                    <a href={{ info['Links']['Instagram'] }}><img class='link-image' src="static/imgs/instagram.png"></a>
                                 </div>
                             </div>
                         </div>
@@ -228,8 +245,8 @@ THE SOFTWARE.
                 Take a look at what my experiences have prepared me for.
             </div>
             <div class="list-wrapper">
-              <div class="cards-list" id="cards-list" style="width: {{ experiences|length*40 }}em">
-                  <div style="cursor: pointer; display: flex; top:50%; width:45px; height:45px; position: absolute; left: 1%; background: black; z-index: 2; border-radius: 50%; align-items: center; justify-content: center; opacity: 0.8" onclick="scrollThumb('Go_R')">
+              <div class="cards-list" id="cards-list" style="width: {{ experiences|length*55 }}em">
+                  <div class="rightScroll" onclick="scrollThumb('Go_R')">
                       <text style="font-size: 20px"><</text>
                   </div>
                   {% for content in experiences %}
@@ -255,7 +272,7 @@ THE SOFTWARE.
                           </div>
                         </div>
                   {% endfor %}
-                  <div style="cursor: pointer; display: flex; top:50%; width:45px; height:45px; position: absolute; right: 1%; background: black; z-index: 2; border-radius: 50%;  align-items: center; justify-content: center; opacity: 0.8" onclick="scrollThumb('Go_L')">
+                  <div class="leftScroll" onclick="scrollThumb('Go_L')">
                       <text style="font-size: 20px">></text>
                   </div>
               </div>
@@ -280,7 +297,7 @@ THE SOFTWARE.
                                 </div>
                                 {% if 'Skills' in content %}
                                     <div class="skill-holder" style="display: inline">
-                                        <div class="skills" style="width: 100%; display: inline-block; font-size: 0.9em">
+                                        <div class="skills">
                                             Skills:
                                             {% for skill in content['Skills'].split(',') %}
                                                 <text class="skill", id="{{ skill }}" onclick="location.href='{{ 'https://www.google.com/search?q=' ~ skill.lower() }}'" style="width: fit-content; cursor: pointer">
@@ -351,6 +368,7 @@ THE SOFTWARE.
 
         </section>
     <div class="end-note">© 2023, Built By Gonglin Chen From Scratch.</div>
+
     </div>
 </body>
 </html>
