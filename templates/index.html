@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
     <link rel= "stylesheet" type= "text/css" media="screen and (min-device-width:641px)" href= "{{ url_for('static',filename='css/index_pc.css') }}">
     <link rel= "stylesheet" type= "text/css" media="screen and (max-device-width:640px)" href= "{{ url_for('static',filename='css/index_mobile.css') }}">
     <link rel="apple-touch-icon" sizes="180x180" href="../static/favicon/apple-touch-icon.png">
@@ -44,6 +44,19 @@ THE SOFTWARE.
     <script>
 
         $(document).ready(function (){
+            var ua = window.navigator.userAgent;
+            var iOS = ua.match(/iPad/i) || ua.match(/iPhone/i);
+            var webkit = ua.match(/WebKit/i);
+            var iOSSafari = iOS && webkit && !ua.match(/CriOS/i);
+
+            console.log(iOSSafari)
+            if (iOSSafari){
+                document.getElementById("container").style.height = "calc(100vh - 80px)"
+            }
+            else{
+                document.getElementById("container").style.height = "100vh"
+            }
+
             var entries = {{keySkills|safe}};
 
             var settings = {

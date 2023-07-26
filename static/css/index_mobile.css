@@ -55,7 +55,6 @@ body{
 }
 
 .container{
-    height: 100vh;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
 }
@@ -546,7 +545,7 @@ h2{
 
 .list-wrapper {
     overflow: auto;
-    height: 100vh;
+    height: 100%;
     margin-left: 6%;
     margin-right: 6%;
     margin-bottom: 10%;
@@ -1007,7 +1006,7 @@ h2{
 .end-note{
     position: relative;
     font-size: 2em;
-    bottom: 10%;
+    bottom: 12%;
     z-index: 999;
     width: 100%;
     text-align: center;
