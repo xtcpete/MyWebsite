@@ -49,7 +49,6 @@ THE SOFTWARE.
             var webkit = ua.match(/WebKit/i);
             var iOSSafari = iOS && webkit && !ua.match(/CriOS/i);
 
-            console.log(iOSSafari)
             if (iOSSafari){
                 document.getElementById("container").style.height = "calc(100vh - 100px)"
             }
@@ -122,13 +121,16 @@ THE SOFTWARE.
         function navigateTo(el){
             const queryString = window.location.search;
             const urlParams = new URLSearchParams(queryString);
-            console.log(el)
+            const nevPage = document.getElementById('nev-page')
+            if (nevPage.style.display != 'none'){
+                openManu()
+            }
+            const nev_page = document.getElementById('nev-page')
 
             el.scrollIntoView({ behavior: 'smooth', block: 'center' });
             const buttons = document.getElementsByTagName('button')
             Array.from(buttons).forEach(function(button) {
                 if (el.id == button.id.split('_')[0]) {
-                    console.log(el.style.background)
                     button.style.background = el.style.background
                     button.style.color = 'white'
                 } else {
@@ -156,17 +158,19 @@ THE SOFTWARE.
             }
        }
 
-       function openMean(){
+       function openManu(){
            const el = document.getElementById('nev-page')
            if (el.style.display == 'none'){
                el.style.display = 'block'
-               el.style.animation = 'nev-ani 0.4s linear'
+               el.style.animation = 'nev-ani 0.2s linear'
            }
            else {
-
-                el.style.animation = 'back-nev-ani 0.4s linear'
-               window.setTimeout(el.style.display = 'none',400)
-
+               var backani
+               clearTimeout(backani);
+               el.style.animation = 'back-nev-ani 0.2s linear'
+               backani = setTimeout(function (ek){
+                   el.style.display = 'none'
+               }, 200)
            }
        }
 
@@ -177,9 +181,9 @@ THE SOFTWARE.
             <button class="header-button" id="home_button" style="background: #1B262C; color: white" onClick="navigateTo(home)" >Home</button>
             <button class="header-button" id="experiences_button" onClick="navigateTo(experiences)">Experiences</button>
             <button class="header-button" id="projects_button" onClick="navigateTo(projects)">Projects</button>
-            <div class="nev" onClick="openMean()">MENU</div>
+            <div class="nev" onClick="openManu()">MENU</div>
         </div>
-        <div id="nev-page" style="display: none; height: 50%; width: 100%; z-index: 999; position: fixed;
+        <div id="nev-page" style="display: none; height: fit-content; width: 100%; z-index: 999; position: fixed;
     top: 0; background: whitesmoke;">
             <button class="nev-button" id="home_button" style="background: #1B262C; color: white" onClick="navigateTo(home)" >Home</button>
             <button class="nev-button" id="experiences_button" onClick="navigateTo(experiences)">Experiences</button>
