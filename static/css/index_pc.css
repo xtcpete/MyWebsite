@@ -780,6 +780,7 @@ h2{
 .projects-cards-list{
     overflow-y: hidden;
     position: relative;
+    max-height: 70%;
     width: 50%;
     padding: 15px 15px 15px;
     margin-left: 0;
