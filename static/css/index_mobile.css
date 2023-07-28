@@ -1036,10 +1036,25 @@ h2{
   }
   50% {
     opacity: 0.8;
-    transform: translate(0, -200px);
+    transform: translate(0, -300px);
   }
   100% {
     opacity: 1;
     transform: translate(0, 0);
+  }
+}
+
+@keyframes back-nev-ani{
+  0% {
+    opacity: 0.5;
+    transform: translate(0, 0px);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translate(0, -300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, -600px);
   }
 }

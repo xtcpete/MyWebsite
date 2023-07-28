@@ -160,10 +160,13 @@ THE SOFTWARE.
            const el = document.getElementById('nev-page')
            if (el.style.display == 'none'){
                el.style.display = 'block'
-               el.style.animation = 'nev-ani 0.5s linear'
+               el.style.animation = 'nev-ani 0.4s linear'
            }
            else {
-               el.style.display = 'none'
+
+                el.style.animation = 'back-nev-ani 0.4s linear'
+               window.setTimeout(el.style.display = 'none',400)
+
            }
        }
 
