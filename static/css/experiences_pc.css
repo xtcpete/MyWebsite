@@ -1,0 +1,167 @@
+html {
+  scroll-behavior: smooth;
+ }
+
+body{
+    width: 100%;
+    margin: 0;
+}
+
+.container{
+    z-index: 0;
+    height: 100vh;
+    background-color: #424874;
+    overflow-x: hidden;
+}
+
+.banner-holder{
+    height: 45%;
+    width: 100%;
+    z-index: 0;
+    background-color: #F4EEFF;
+}
+
+.banner-img{
+    width: fit-content;
+    height: 40vh;
+}
+
+.banner{
+    position: relative;
+    height: 35vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.content-holder{
+    top: -15vh;
+    padding: 20px;
+    height: fit-content;
+    width: 100%;
+    position: relative;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner-content{
+    width: 80%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 25px;
+    height: auto;
+}
+
+.title{
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.company{
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.date{
+    float: right;
+    font-weight: normal;
+}
+
+.detail-holder{
+    width: 100%;
+    display: flex;
+}
+
+.summary-holder{
+    float: left;
+    width: 60%;
+    margin-top: 20px;
+}
+
+.summary-title{
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    width: 100%;
+}
+
+.summary-point{
+    margin-top: 15px;
+}
+
+.skill-holder{
+    margin-top: 20px;
+    float: right;
+    width: 40%;
+}
+
+.skill-title{
+    text-align: right;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    width: 100%;
+}
+
+.skill{
+    text-align: right;
+    width: 100%;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.supervisor-holder{
+    width: 100%;
+    float: bottom;
+    margin-top: 20px;
+}
+
+.supervisor-title{
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    width: 100%;
+}
+
+.about-holder{
+    margin-top: 20px;
+    width: 100%;
+}
+
+.about-title{
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    width: 100%;
+}
+
+.supportive-holder{
+    margin-top: 20px;
+    width: 100%;
+}
+
+.supportive-title{
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    width: 100%;
+}
+
+.supportive-file-holder{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
