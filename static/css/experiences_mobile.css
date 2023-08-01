@@ -5,11 +5,11 @@ html {
 body{
     width: 100%;
     margin: 0;
+    background-color: #424874;
+    min-height: 100vh;
 }
 
 .container{
-    min-height: 100%;
-    background-color: #424874;
     margin: 0;
     z-index: 0;
     padding:1px;
@@ -47,7 +47,6 @@ body{
 
 .content-holder{
     top: -5vh;
-    height: fit-content;
     width: 100%;
     margin-bottom: 5%;
     z-index: 2;
