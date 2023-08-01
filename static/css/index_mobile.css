@@ -56,8 +56,6 @@ body{
 
 .container{
     overflow-y: scroll;
-    min-height: 100%;
-    z-index: 2;
     scroll-snap-type: y mandatory;
 }
 
@@ -644,7 +642,6 @@ h2{
     padding: 0;
     z-index: 1;
     height: 100%;
-    margin-bottom: 15%;
     background-color: transparent;
     overflow: hidden;
     position: relative;
