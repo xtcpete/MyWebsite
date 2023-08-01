@@ -388,7 +388,7 @@ section{
 
 .personal-info{
     position: absolute;
-    bottom: 10%;
+    bottom: 8%;
     margin-left: 6%;
     margin-right: 6%;
     min-width: 90%;
@@ -552,7 +552,7 @@ h2{
 }
 
 .cards-list {
-    height: 70%;
+    height: 75%;
     padding: 15px 15px 15px;
     overflow: hidden;
     margin: auto;
