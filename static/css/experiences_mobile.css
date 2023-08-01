@@ -9,7 +9,7 @@ body{
 
 .container{
     z-index: 0;
-    height: 100vh;
+    height: 95vh;
     background-color: #424874;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -43,10 +43,10 @@ body{
 }
 
 .content-holder{
-    top: -5vh;
-    padding: 20px;
+    top: -3vh;
     height: fit-content;
     width: 100%;
+    margin-bottom: 5%;
     position: relative;
     background-color: transparent;
     display: flex;
@@ -74,7 +74,7 @@ body{
 }
 
 .date{
-    float: right;
+    float: left;
     font-weight: normal;
 }
 
