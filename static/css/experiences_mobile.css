@@ -9,9 +9,10 @@ body{
 
 .container{
     min-height: 100%;
-    margin: 0;
-    padding: 1px;
     background-color: #424874;
+    margin: 0;
+    z-index: 0;
+    padding:1px;
     overflow-x: hidden;
     overflow-y: scroll;
 }
@@ -19,7 +20,7 @@ body{
 .banner-holder{
     height: 20%;
     width: 100%;
-    z-index: 0;
+    z-index: 1;
     background-color: #F4EEFF;
 }
 
