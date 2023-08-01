@@ -50,7 +50,7 @@ THE SOFTWARE.
             var iOSSafari = iOS && webkit && !ua.match(/CriOS/i);
 
             if (iOSSafari){
-                document.getElementById("container").style.height = "calc(100vh - 100px)"
+                document.getElementById("container").style.height = "calc(100vh - 10vh)"
             }
             else{
                 document.getElementById("container").style.height = "100vh"
@@ -312,7 +312,7 @@ THE SOFTWARE.
                 <div class="demo-wrapper">
                     <div class="subtitle">Try It (Demo)</div>
                     <div class="demo-list-wrapper">
-                        <div class="projects-cards-list" style="height: {{ demo|length*55 }}%">
+                        <div class="projects-cards-list" style="height: {{ demo|length*58 }}%">
                             {% for content in demo %}
                                 <div class="demo-card" onclick="location.href='{{ content['id'] }}'">
                                     <div class="card-title">{{ content['Title'] }}</div>
@@ -338,7 +338,7 @@ THE SOFTWARE.
                 <div class="nodemo-wrapper">
                 <div class="subtitle">Github/Colab</div>
                     <div class="nodemo-list-wrapper">
-                        <div class="projects-cards-list" style="height: {{ nodemo|length*55 }}%">
+                        <div class="projects-cards-list" style="height: {{ nodemo|length*58 }}%">
                             {% for content in nodemo %}
                                 {% if 'Github' in content %}
                                 <div class="demo-card" onclick="location.href='{{ content['Github'] }}'">
