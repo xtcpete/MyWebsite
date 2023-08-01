@@ -9,7 +9,6 @@ body{
 
 .container{
     z-index: 0;
-    height: 95vh;
     background-color: #424874;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -29,7 +28,7 @@ body{
 
 .banner{
     position: relative;
-    height: 15vh;
+    height: 20vh;
     width: 100%;
     background-size: cover;
     background-position: center center;
