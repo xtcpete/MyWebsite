@@ -162,15 +162,15 @@ THE SOFTWARE.
            const el = document.getElementById('nev-page')
            if (el.style.display == 'none'){
                el.style.display = 'block'
-               el.style.animation = 'nev-ani 0.1s linear'
+               el.style.animation = 'nev-ani 0.15s linear'
            }
            else {
                var backani
                clearTimeout(backani);
-               el.style.animation = 'back-nev-ani 0.1s linear'
+               el.style.animation = 'back-nev-ani 0.15s linear'
                backani = setTimeout(function (ek){
                    el.style.display = 'none'
-               }, 100)
+               }, 150)
            }
        }
 

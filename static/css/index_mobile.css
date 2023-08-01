@@ -388,7 +388,7 @@ section{
 
 .personal-info{
     position: absolute;
-    bottom: 8%;
+    bottom: 6%;
     margin-left: 6%;
     margin-right: 6%;
     min-width: 90%;
@@ -552,7 +552,7 @@ h2{
 }
 
 .cards-list {
-    height: 80%;
+    height: 75%;
     padding: 15px 15px 15px;
     overflow: hidden;
     margin: auto;
@@ -774,7 +774,7 @@ h2{
 .projects-cards-list{
     overflow-y: hidden;
     position: relative;
-    width: 80%;
+    width: 75%;
     padding: 15px 15px 15px;
     margin-left: 0;
     z-index: 1;
