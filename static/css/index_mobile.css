@@ -804,7 +804,7 @@ h2{
     overflow: hidden;
     display: inline-block;
     position: relative;
-    max-height: 30vh;
+    max-height: 32vh;
     min-height: 10vh;
     width: 100%;
     cursor: pointer;
