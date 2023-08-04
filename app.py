@@ -15,12 +15,25 @@ Home page
 
 
 @app.route('/')
-@cache.cached(timeout=50)
 def index():
-    db = MongoDB('root').db
-    data_collect = db.get_collection('Main')
 
-    experiences = [d for d in data_collect.find({'_id': "Experiences"}, {"_id": 0, 'data': 1})][0]['data']
+    if 'lan' in request.args:
+        lan = request.args.get('lan')
+    else:
+        lan = None
+
+    db = MongoDB('root').db
+    print(request.args)
+    if lan is None or lan == 'en':
+        data_collect = db.get_collection('Main')
+    elif lan == 'zh':
+        data_collect = db.get_collection('zhMain')
+
+    try:
+        experiences = [d for d in data_collect.find({'_id': "Experiences"}, {"_id": 0, 'data': 1})][0]['data']
+    except:
+        return "中文网站开发中。。。"
+
     experiences_list = []
     for i in reversed(range(len(experiences))):
         experiences_list.append(experiences[str(i)])
@@ -55,15 +68,16 @@ Admin page
 
 
 @app.route('/admin')
-@cache.cached(timeout=50)
 def admin():
-    try:
+    if 'key' in request.args:
         key = request.args.get('key')
-    except:
+    else:
         return "Unauthorized"
 
     if key == "xtcpete":
+
         db = MongoDB('root').db
+
         collections = db.list_collection_names()
         all_data = {}.fromkeys(collections)
         for collection in collections:

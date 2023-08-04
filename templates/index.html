@@ -44,6 +44,15 @@ THE SOFTWARE.
     <script>
 
         $(document).ready(function (){
+            var usrlang = navigator.language
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const querylan = urlParams.get('lan')
+            if (usrlang == 'zh-CN'){
+                 if (querylan != undefined && querylan=='zh') {
+                     window.location.href = "http://127.0.0.1:5000?lan=zh"
+                 }
+            }
             var ua = window.navigator.userAgent;
             var iOS = ua.match(/iPhone/i);
             var webkit = ua.match(/WebKit/i);
@@ -51,12 +60,15 @@ THE SOFTWARE.
             var isIOSChrome = iOS && webkit && ua.match(/CriOS/i);
             if (iOSSafari){
                 document.getElementById("container").style.height = "calc(100vh - 10vh)"
+                document.getElementById("cards-list").style.width = "{{ experiences|length*55 }}em"
             }
             else if (isIOSChrome){
                 document.getElementById("container").style.height = "calc(100vh - 12vh)"
+                document.getElementById("cards-list").style.width = "{{ experiences|length*55 }}em"
             }
             else{
                 document.getElementById("container").style.height = "100vh"
+                document.getElementById("cards-list").style.width = "{{ experiences|length*35 }}em"
             }
 
             var entries = {{keySkills|safe}};
@@ -271,7 +283,7 @@ THE SOFTWARE.
                 Take a look at what my experiences have prepared me for.
             </div>
             <div class="list-wrapper">
-              <div class="cards-list" id="cards-list" style="width: {{ experiences|length*35 }}em">
+              <div class="cards-list" id="cards-list">
                   <div class="rightScroll" onclick="scrollThumb('Go_R')">
                       <text style="font-size: 20px"><</text>
                   </div>
