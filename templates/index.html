@@ -49,7 +49,7 @@ THE SOFTWARE.
             const urlParams = new URLSearchParams(queryString);
             const querylan = urlParams.get('lan')
             if (usrlang == 'zh-CN'){
-                 if (querylan != undefined && querylan=='zh') {
+                 if (querylan == undefined) {
                      window.location.href = "https://www.xtcpete.com?lan=zh"
                  }
             }
