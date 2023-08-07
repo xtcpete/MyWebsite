@@ -51,6 +51,8 @@ THE SOFTWARE.
             if (usrlang == 'zh-CN'){
                  if (querylan == undefined) {
                      window.location.href = "https://www.xtcpete.com?lan=zh"
+                     document.getElementById('contact-button').innerHTML = '联系方式'
+                     document.getElementById('resume-button').innerHTML = '简历'
                  }
             }
             var ua = window.navigator.userAgent;
@@ -242,17 +244,19 @@ THE SOFTWARE.
                                 <div class="link-holder">
                                     <a href={{ info['Links']['Github'] }}><img class='link-image' src="static/imgs/github.png"></a>
                                 </div>
-                                <div class="link-holder">
-                                    <a href={{ info['Links']['Instagram'] }}><img class='link-image' src="static/imgs/instagram.png"></a>
-                                </div>
+                                {% if 'Instagram' in info['Links'] %}
+                                    <div class="link-holder">
+                                        <a href={{ info['Links']['Instagram'] }}><img class='link-image' src="static/imgs/instagram.png"></a>
+                                    </div>
+                                {% endif %}
                             </div>
                         </div>
                         <div class="button-wrapper">
-                            <div class="resume-button" onclick="window.location.href='resume';">
+                            <div class="resume-button" id='resume-button' onclick="window.location.href='resume';">
                                 Resume
                             </div>
 
-                            <div class="resume-button" onclick="showContact()">
+                            <div class="resume-button" id='contact-button'onclick="showContact()">
                                 Contact
                             </div>
                         </div>
