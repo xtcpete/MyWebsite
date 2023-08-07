@@ -48,13 +48,18 @@ THE SOFTWARE.
             const queryString = window.location.search;
             const urlParams = new URLSearchParams(queryString);
             const querylan = urlParams.get('lan')
+            var contact = document.getElementById('contact-button')
+            var resume = document.getElementById('resume-button')
+            contact.innerText = 'Contact'
+            resume.innerText = 'Resume'
             if (usrlang == 'zh-CN'){
                  if (querylan == undefined) {
                      window.location.href = "https://www.xtcpete.com?lan=zh"
-                     document.getElementById('contact-button').innerHTML = '联系方式'
-                     document.getElementById('resume-button').innerHTML = '简历'
+                     resume.innerText = "简历"
+                     contact.innerText = '联系方式'
                  }
             }
+
             var ua = window.navigator.userAgent;
             var iOS = ua.match(/iPhone/i);
             var webkit = ua.match(/WebKit/i);
@@ -253,11 +258,11 @@ THE SOFTWARE.
                         </div>
                         <div class="button-wrapper">
                             <div class="resume-button" id='resume-button' onclick="window.location.href='resume';">
-                                Resume
+
                             </div>
 
                             <div class="resume-button" id='contact-button'onclick="showContact()">
-                                Contact
+
                             </div>
                         </div>
                     </div>
