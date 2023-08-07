@@ -50,13 +50,24 @@ THE SOFTWARE.
             const querylan = urlParams.get('lan')
             var contact = document.getElementById('contact-button')
             var resume = document.getElementById('resume-button')
-            contact.innerText = 'Contact'
-            resume.innerText = 'Resume'
+
+            if (querylan == 'zh'){
+                contact.innerText = '联系方式'
+                resume.innerText = '简历'
+                document.getElementById('home_button').innerText = '主页'
+                document.getElementById('experiences_button').innerText = '工作经验'
+                document.getElementById('projects_button').innerText = '项目'
+            }
+            else{
+                contact.innerText = 'Contact'
+                resume.innerText = 'Resume'
+                document.getElementById('home_button').innerText = 'Home'
+                document.getElementById('experiences_button').innerText = 'Experiences'
+                document.getElementById('projects_button').innerText = 'Projects'
+            }
             if (usrlang == 'zh-CN'){
                  if (querylan == undefined) {
                      window.location.href = "https://www.xtcpete.com?lan=zh"
-                     resume.innerText = "简历"
-                     contact.innerText = '联系方式'
                  }
             }
 
@@ -200,16 +211,16 @@ THE SOFTWARE.
     <div class="container" id="container">
         <div class="header">
             <div class="header-text">XTCPETE</div>
-            <button class="header-button" id="home_button" style="background: #1B262C; color: white" onClick="navigateTo(home)" >Home</button>
-            <button class="header-button" id="experiences_button" onClick="navigateTo(experiences)">Experiences</button>
-            <button class="header-button" id="projects_button" onClick="navigateTo(projects)">Projects</button>
+            <button class="header-button" id="home_button" style="background: #1B262C; color: white" onClick="navigateTo(home)" ></button>
+            <button class="header-button" id="experiences_button" onClick="navigateTo(experiences)"></button>
+            <button class="header-button" id="projects_button" onClick="navigateTo(projects)"></button>
             <div class="nev" onClick="openManu()">MENU</div>
         </div>
         <div id="nev-page" style="display: none; height: fit-content; width: 100%; z-index: 999; position: fixed;
     top: 0; background: whitesmoke;">
-            <button class="nev-button" id="home_button" style="background: #1B262C; color: white" onClick="navigateTo(home)" >Home</button>
-            <button class="nev-button" id="experiences_button" onClick="navigateTo(experiences)">Experiences</button>
-            <button class="nev-button" id="projects_button" onClick="navigateTo(projects)">Projects</button>
+            <button class="nev-button" id="home_button" style="background: #1B262C; color: white" onClick="navigateTo(home)" ></button>
+            <button class="nev-button" id="experiences_button" onClick="navigateTo(experiences)"></button>
+            <button class="nev-button" id="projects_button" onClick="navigateTo(projects)"></button>
         </div>
         <section id="home" style="background: #1B262C; z-index: 1">
             <div class="star1"></div>
