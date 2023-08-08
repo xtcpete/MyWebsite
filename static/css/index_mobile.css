@@ -413,7 +413,7 @@ section{
 .links-wrapper{
     position: relative;
     padding: 15px;
-    min-width: 200px;
+    width: fit-content;
     height: 60px;
     border-radius: 20px;
     background-color: #BBE1FA;
