@@ -50,10 +50,21 @@ THE SOFTWARE.
             const querylan = urlParams.get('lan')
             var contact = document.getElementById('contact-button')
             var resume = document.getElementById('resume-button')
-
+            var nev_buttons = document.getElementsByClassName("nev-button");
             if (querylan != 'zh'){
                 contact.innerText = 'Contact'
                 resume.innerText = 'Resume'
+                for(var i = 0; i < nev_buttons.length; i++) {
+                    if (nev_buttons[i].id == 'home_button'){
+                        nev_buttons[i].innerText = 'Home'
+                    }
+                    else if (nev_buttons[i].id == 'experiences_button'){
+                        nev_buttons[i].innerText = 'Experiences'
+                    }
+                    else {
+                        nev_buttons[i].innerText = 'Projects'
+                    };
+                }
                 document.getElementById('home_button').innerText = 'Home'
                 document.getElementById('experiences_button').innerText = 'Experiences'
                 document.getElementById('projects_button').innerText = 'Projects'
@@ -61,6 +72,17 @@ THE SOFTWARE.
             else{
                 contact.innerText = '联系方式'
                 resume.innerText = '简历'
+                for(var i = 0; i < nev_buttons.length; i++) {
+                    if (nev_buttons[i].id == 'home_button'){
+                        nev_buttons[i].innerText = '主页'
+                    }
+                    else if (nev_buttons[i].id == 'experiences_button'){
+                        nev_buttons[i].innerText = '工作经验'
+                    }
+                    else {
+                        nev_buttons[i].innerText = '项目'
+                    };
+                }
                 document.getElementById('home_button').innerText = '主页'
                 document.getElementById('experiences_button').innerText = '工作经验'
                 document.getElementById('projects_button').innerText = '项目'
