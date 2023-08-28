@@ -147,7 +147,7 @@ THE SOFTWARE.
         }
 
         function showContact(){
-            window.alert("Email: xtcpetecgl@gmail.com \nPhone: 530-750-9653")
+            window.alert("Email: {{ info['Contact']['Email'] }} \nPhone: {{ info['Contact']['Phone'] }}")
         };
 
         document.addEventListener("wheel", (event) => {
