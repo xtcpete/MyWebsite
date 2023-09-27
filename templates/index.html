@@ -107,9 +107,13 @@ THE SOFTWARE.
                 document.getElementById("container").style.height = "calc(100vh - 12vh)"
                 document.getElementById("cards-list").style.width = "{{ experiences|length*55 }}em"
             }
-            else{
-                document.getElementById("container").style.height = "98vh"
+            else if (webkit){
+                document.getElementById("container").style.height = "100vh"
                 document.getElementById("cards-list").style.width = "{{ experiences|length*55 }}em"
+            }
+            else{
+                document.getElementById("container").style.height = "100vh"
+                document.getElementById("cards-list").style.width = "{{ experiences|length*35 }}em"
             }
 
             var entries = {{keySkills|safe}};
