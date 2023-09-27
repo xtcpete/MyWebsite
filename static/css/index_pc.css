@@ -779,13 +779,14 @@ h2{
 }
 
 .projects-cards-list{
-    overflow-y: hidden;
+    overflow: hidden;
     position: relative;
     width: 50%;
     padding: 15px 15px 15px;
     margin-left: 0;
     z-index: 1;
-    background: #A75D5D
+    background: #A75D5D;
+    padding: 50%;
 }
 
 @keyframes project-ani{
