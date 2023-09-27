@@ -97,9 +97,7 @@ THE SOFTWARE.
             var iOS = ua.match(/iPhone/i);
             var webkit = ua.match(/WebKit/i);
             var safari = ua.indexOf("Safari") != -1
-            if safari {
-                window.alert("safari")
-            }
+            console.log(safari)
             var iOSSafari = iOS && safari && webkit && !ua.match(/CriOS/i);
             var isIOSChrome = iOS && webkit && ua.match(/CriOS/i);
             if (iOSSafari){
