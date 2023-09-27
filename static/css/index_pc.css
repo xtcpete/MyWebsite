@@ -764,14 +764,14 @@ h2{
 }
 
 .demo-list-wrapper{
-    overflow: auto;
+    overflow-y: scroll;
     height: 92%;
     width: 200%;
     z-index: 0;
 }
 
 .nodemo-list-wrapper{
-    overflow: auto;
+    overflow-y: scroll;
     width: 200%;
     height:92%;
     z-index: 0;
@@ -779,7 +779,8 @@ h2{
 }
 
 .projects-cards-list{
-    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: hidden;
     position: relative;
     width: 50%;
     padding: 15px 15px 15px;
