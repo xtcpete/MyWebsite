@@ -97,6 +97,7 @@ THE SOFTWARE.
             var iOS = ua.match(/iPhone/i);
             var webkit = ua.match(/WebKit/i);
             var iOSSafari = iOS && ua.match(/AppleWebKit/i) && !ua.match(/CriOS/i);
+            console.log(ua.match(/AppleWebKit/i))
             var isIOSChrome = iOS && webkit && ua.match(/CriOS/i);
             if (iOSSafari){
                 document.getElementById("container").style.height = "calc(100vh - 10vh)"
