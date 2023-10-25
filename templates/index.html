@@ -183,7 +183,7 @@ THE SOFTWARE.
             const urlParams = new URLSearchParams(queryString);
             const nevPage = document.getElementById('nev-page')
             if (nevPage.style.display != 'none'){
-                openManu()
+                openMenu()
             }
             const nev_page = document.getElementById('nev-page')
 
@@ -218,21 +218,36 @@ THE SOFTWARE.
             }
        }
 
-       function openManu(){
-           const el = document.getElementById('nev-page')
-           if (el.style.display == 'none'){
-               el.style.display = 'block'
-               el.style.animation = 'nev-ani 0.15s linear'
+        function openMenu(){
+            // check what section is in view
+            const buttons = document.getElementsByTagName('button')
+            Array.from(buttons).forEach(function(button) {
+                const id = button.id.split('_')[0]
+                const el = document.getElementById(id)
+                if (isInViewport(el)){
+                    button.style.background = el.style.background
+                    button.style.color = 'white'
+                }
+                else{
+                    button.style.background = 'None'
+                    button.style.color = 'gray'
+                }
+            })
+            
+            const el = document.getElementById('nev-page')
+            if (el.style.display == 'none'){
+                el.style.display = 'block'
+                el.style.animation = 'nev-ani 0.15s linear'
+            }
+            else {
+                var backani
+                clearTimeout(backani);
+                el.style.animation = 'back-nev-ani 0.15s linear'
+                backani = setTimeout(function (ek){
+                    el.style.display = 'none'
+                }, 150)
            }
-           else {
-               var backani
-               clearTimeout(backani);
-               el.style.animation = 'back-nev-ani 0.15s linear'
-               backani = setTimeout(function (ek){
-                   el.style.display = 'none'
-               }, 150)
-           }
-       }
+        }
 
     </script>
     <div class="container" id="container">
@@ -241,7 +256,7 @@ THE SOFTWARE.
             <button class="header-button" id="home_button" style="background: #1B262C; color: white" onClick="navigateTo(home)" ></button>
             <button class="header-button" id="experiences_button" onClick="navigateTo(experiences)"></button>
             <button class="header-button" id="projects_button" onClick="navigateTo(projects)"></button>
-            <div class="nev" onClick="openManu()">MENU</div>
+            <div class="nev" onClick="openMenu()">MENU</div>
         </div>
         <div id="nev-page" style="display: none; height: fit-content; width: 100%; z-index: 999; position: fixed;
     top: 0; background: whitesmoke;">
