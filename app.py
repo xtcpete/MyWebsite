@@ -188,7 +188,7 @@ def chat():
     return render_template("chat.html")
 
 @app.route('/pet')
-def chat():
+def dashboard():
     return render_template("demo/pet_dashboard/templates/home.html")
 
 if __name__ == '__main__':
