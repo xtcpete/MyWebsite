@@ -4,7 +4,7 @@
             "name": "Dogs",
             "children": [
                 {
-                    "name": "Animal Shelter/Humane Society",
+                    "name": "Animal Shelter",
                     "group": "A",
                     "value": 17.94,
                     "colname": "level3"
@@ -46,7 +46,7 @@
             "name": "Cats",
             "children": [
                 {
-                    "name": "Animal Shelter/Humane Society",
+                    "name": "Animal Shelter",
                     "group": "B",
                     "value": 26.598,
                     "colname": "level3"
