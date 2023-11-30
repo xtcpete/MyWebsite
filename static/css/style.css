@@ -90,7 +90,8 @@ body {
     transition: opacity 0.2s ease, box-shadow 0.2s ease, transform 330ms ease-in-out;
 }
 
-.home-stat-card.hover{
+.home-stat-card.hover,
+.home-stat-card:hover {
     transform: scale(1.02);
     transition: transform 330ms ease-in-out;
 }
