@@ -3,10 +3,10 @@ let lineChart;
 const lineChartData = {
   labels: [],
   datasets: [{
-    label: 'Sale (Billion)',
+    label: 'Sales',
     data: [],
     fill: false,
-    borderColor: '#9C6925',
+    borderColor: '#916956',
     tension: 0.1
   }]
 };
@@ -40,7 +40,7 @@ const lineChartConfig = {
         display: true,
         title: {
           display: true,
-          text: 'Sale ($)'
+          text: 'Sales ($ Billion)'
         }
       }
     },
@@ -81,7 +81,7 @@ const pieChartConfig = {
     labels: [],
     datasets: [{
       data: [],
-      backgroundColor: ['#E29F26', '#5D9B2B', '#E2267D', '#6967A7'],
+      backgroundColor: [ '#EAC04D', '#51964B','#A56F95', '#FE929D'],
       hoverOffset: 4
     }]
   },
@@ -169,12 +169,12 @@ function fetchBarChartData() {
           {
             label: 'Dog Owner',
             data: dogData,
-            backgroundColor: '#20836D'
+            backgroundColor: '#456F9B'
           },
           {
             label: 'Cat Owner',
             data: catData,
-            backgroundColor: '#D25319'
+            backgroundColor: '#EF8132'
           }
         ]
       };

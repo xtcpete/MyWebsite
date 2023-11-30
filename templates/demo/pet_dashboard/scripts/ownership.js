@@ -1,7 +1,6 @@
 d3.csv("../data/households.csv").then(function (data) {
-    const margin = { top: 10, right: 170, bottom: 30, left: 100 }
-    
-    var width = document.getElementById('households').clientWidth - margin.left - margin.right,
+    const margin = { top: 10, right: 170, bottom: 30, left: 100 },
+        width = 1100 - margin.left - margin.right,
         height = 400 - margin.top - margin.bottom;
 
     const svg = d3.select("#households")
@@ -32,14 +31,14 @@ d3.csv("../data/households.csv").then(function (data) {
         .style("font-size", "12px")
         .call(d3.axisLeft(y));
 
-    const color = d3.scaleOrdinal(d3.schemeSet1);
+    const color = d3.scaleOrdinal(d3.schemeTableau10);
 
     svg.selectAll(".line")
         .data(sumstat)
         .join("path")
         .attr("fill", "none")
         .attr("stroke", function (d) { return color(d[0]) })
-        .attr("stroke-width", 2)
+        .attr("stroke-width", 3)
         .attr("d", function (d) {
             return d3.line()
                 .x(function (d) { return x(d.year); })
@@ -58,7 +57,7 @@ d3.csv("../data/households.csv").then(function (data) {
         .attr("x2", width + 40)
         .attr("y2", function (d, i) { return 5 + i * 30 })
         .style("stroke", function (d) { return color(d) })
-        .attr("stroke-width", 2)
+        .attr("stroke-width", 3)
 
     svg.selectAll("legend_labels")
         .data(sumstat.keys())
@@ -76,7 +75,7 @@ d3.csv("../data/households.csv").then(function (data) {
             .transition()
             .delay(100)
             .attr("opacity", function(d) {
-                return (d[0] === selectedCategory) ? 1 : 0
+                return (d[0] === selectedCategory) ? 1 : 0.2
             });
         })
         .on("mouseout", function(){
@@ -106,9 +105,8 @@ d3.csv("../data/households.csv").then(function (data) {
 
 d3.json("../data/sources.json").then(function (data) {
 
-    const margin = { top: 10, right: 10, bottom: 10, left: 10 };
-        
-    var width = document.getElementById('sources').clientWidth - margin.left - margin.right,
+    const margin = { top: 10, right: 10, bottom: 10, left: 10 },
+        width = 1100 - margin.left - margin.right,
         height = 600 - margin.top - margin.bottom;
 
     const svg = d3.select("#sources")
@@ -130,7 +128,7 @@ d3.json("../data/sources.json").then(function (data) {
 
     const format = d3.format(".2f");
 
-    const color = d3.scaleOrdinal(d3.schemeSet1);
+    const color = d3.scaleOrdinal(d3.schemeTableau10);
 
     const scale = d3.scaleLinear()
         .domain([0, 40])
