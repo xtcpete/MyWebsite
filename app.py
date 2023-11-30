@@ -183,10 +183,13 @@ def catch_all_chat():
     resp = get_chat_response(message)
     return resp
 
-
 @app.route('/chat')
 def chat():
     return render_template("chat.html")
+
+@app.route('/pet')
+def chat():
+    return render_template("demo/pet_dashboard/templates/home.html")
 
 if __name__ == '__main__':
     socketio.run(app, debug=True)

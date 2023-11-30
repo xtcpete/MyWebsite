@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DSCI 554 Project-Ownership</title>
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class='title'>Pet Ownership in the U.S.</h1>
+
+        <script src='../node_modules/d3/dist/d3.min.js'></script>
+
+        <div class="row">
+            <!-- Sale Card -->
+            <div class="col">
+                <div class="stat-card">
+                    <div class="d-flex justify-content-between">
+                        <div class="stat-title">Households owning a pet</div>
+                        <span class="stat-icon">🏠</span>
+                    </div>
+                    <div class="stat-number">90.5M</div>
+                </div>
+            </div>
+            <!-- Sale Card -->
+            <div class="col">
+                <div class="stat-card">
+                    <div class="d-flex justify-content-between">
+                        <div class="stat-title">Households owning a dog</div>
+                        <span class="stat-icon">🐶</span>
+                    </div>
+                    <div class="stat-number">69.0M</div>
+                </div>
+            </div>
+            <!-- Sale Card -->
+            <div class="col">
+                <div class="stat-card">
+                    <div class="d-flex justify-content-between">
+                        <div class="stat-title">Households owning a cat</div>
+                        <span class="stat-icon">🐱</span>
+                    </div>
+                    <div class="stat-number">45.3M</div>
+                </div>
+            </div>
+
+        </div>
+
+        <br>
+
+        <div class="card">
+            <div class="card-body">
+                <h4>Number of U.S. Households That Own a Pet, by Type of Animal (millions)</h4>
+                <div id="households"></div>
+            </div>
+        </div>
+        <br>
+        <div class="card">
+            <div class="card-body">
+                <h4>Sources of Dogs and Cats</h4>
+                <div id="sources"></div>
+            </div>
+        </div>
+
+        <script src="../scripts/ownership.js"></script>
+
+        <footer class="pt-3 mt-4 text-muted border-top">
+            Fluffy Friends-Rui Xue
+        </footer>
+    </div>
+</body>
+
+</html>
