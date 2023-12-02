@@ -189,7 +189,7 @@ def chat():
 
 @app.route('/pet')
 def dashboard():
-    return render_template("pet.html")
+    return render_template("demo/pet.html")
 
 if __name__ == '__main__':
     socketio.run(app, debug=True)
