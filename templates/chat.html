@@ -239,7 +239,7 @@
            // Implement the logic to generate the assistant's reply based on user input
            // You may use APIs or any other resources for generating responses
            const http = new EasyHTTP;
-           const link = 'https://www.xtcpete.com/chat-api/'
+           const link = 'http://www.xtcpete.com/chat-api/'
            //const link = 'http://127.0.0.1:5000/chat-api/'
            http.put(link, userInput).then((response) => {
                response.text().then((text) =>{
