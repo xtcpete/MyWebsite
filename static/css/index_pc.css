@@ -377,8 +377,8 @@ section{
 
 .personal-info{
     position: absolute;
-    top: 25px;
-    max-height: 65vh;
+    bottom: 28vh;
+    max-height: 60vh;
     margin-left: 6%;
     color: #EEEEEE;
     z-index: 1;
