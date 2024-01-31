@@ -1063,3 +1063,7 @@ h2{
     transform: translate(0, -600px);
   }
 }
+
+.content-container{
+    height: 90%;
+}
