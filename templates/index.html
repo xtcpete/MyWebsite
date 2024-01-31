@@ -97,11 +97,11 @@ THE SOFTWARE.
             var iOS = ua.match(/iPhone/i);
             var webkit = ua.match(/WebKit/i);
             if (webkit){
-                document.getElementById("container").style.height = "100%"
+                document.getElementById("container").style.height = "100vh"
                 document.getElementById("cards-list").style.width = "{{ experiences|length*55 }}em"
             }
             else{
-                document.getElementById("container").style.height = "100%"
+                document.getElementById("container").style.height = "100vh"
                 document.getElementById("cards-list").style.width = "{{ experiences|length*35 }}em"
             }
 
