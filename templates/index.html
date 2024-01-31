@@ -96,18 +96,7 @@ THE SOFTWARE.
             var ua = window.navigator.userAgent;
             var iOS = ua.match(/iPhone/i);
             var webkit = ua.match(/WebKit/i);
-            var safari = (ua.indexOf("Safari") != -1)
-            var iOSSafari = iOS && safari && webkit && !ua.match(/CriOS/i);
-            var isIOSChrome = iOS && webkit && !ua.match(/Version/i);
-            if (iOSSafari){
-                document.getElementById("container").style.height = "calc(100vh - 10vh)"
-                document.getElementById("cards-list").style.width = "{{ experiences|length*55 }}em"
-            }
-            else if (isIOSChrome){
-                document.getElementById("container").style.height = "100vh"
-                document.getElementById("cards-list").style.width = "{{ experiences|length*55 }}em"
-            }
-            else if (webkit){
+            if (webkit){
                 document.getElementById("container").style.height = "100vh"
                 document.getElementById("cards-list").style.width = "{{ experiences|length*55 }}em"
             }
