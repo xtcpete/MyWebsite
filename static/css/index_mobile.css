@@ -388,7 +388,7 @@ section{
 
 .personal-info{
     position: absolute;
-    margin-top: 18vh;
+    bottom: 15vh;
     margin-left: 6%;
     margin-right: 6%;
     min-width: 90%;
