@@ -89,7 +89,7 @@ section{
     top: 5%;
     left: 88%;
     box-shadow: 0 0 2px 2px #fff;
-    z-index: 1;
+    z-index: 999;
 }
 
 .star2 {
@@ -102,7 +102,7 @@ section{
     top: 10%;
     left: 87%;
     box-shadow: 0 0 2px 2px #fff;
-    z-index: 1;
+    z-index: 999;
 }
 
 .star3 {
@@ -115,7 +115,7 @@ section{
   top: 35%;
   left: 20%;
   box-shadow: 0 0 2px 2px #fff;
-    z-index: 1;
+  z-index: 999;
 }
 
 .star4 {
@@ -128,7 +128,7 @@ section{
   top: 40%;
   left: 10%;
   box-shadow: 0 0 2px 2px #fff;
-    z-index: 1;
+  z-index: 999;
 }
 
 .star5 {
@@ -141,7 +141,7 @@ section{
   top: 12%;
   left: 44%;
   box-shadow: 0 0 2px 2px #fff;
-    z-index: 1;
+    z-index: 999;
 }
 
 .star6 {
@@ -154,7 +154,7 @@ section{
   top: 10%;
   left: 60%;
   box-shadow: 0 0 2px 2px #fff;
-    z-index: 1;
+    z-index: 999;
 }
 
 .star7 {
@@ -167,7 +167,7 @@ section{
   top: 15%;
   left: 20%;
   box-shadow: 0 0 2px 2px #fff;
-    z-index: 1;
+    z-index: 999;
 }
 
 .star8 {
@@ -180,7 +180,7 @@ section{
   top: 5%;
   left: 78%;
   box-shadow: 0 0 2px 2px #fff;
-    z-index: 1;
+    z-index: 999;
 }
 
 .star9 {
@@ -193,7 +193,7 @@ section{
   top: 38%;
   left: 60%;
   box-shadow: 0 0 2px 2px #fff;
-    z-index: 1;
+    z-index: 999;
 }
 
 .star10 {
@@ -206,7 +206,7 @@ section{
   top: 8%;
   left: 82%;
   box-shadow: 0 0 2px 2px #fff;
-    z-index: 1;
+    z-index: 999;
 }
 
 .star11 {
@@ -219,7 +219,7 @@ section{
   top: 33%;
   left: 45%;
   box-shadow: 0 0 2px 2px #fff;
-    z-index: 1;
+    z-index:  999;
 }
 
 .star12 {
@@ -232,7 +232,7 @@ section{
   top: 18%;
   left: 60%;
   box-shadow: 0 0 2px 2px #fff;
-    z-index: 1;
+    z-index: 999;
 }
 
 .star13 {
@@ -245,7 +245,7 @@ section{
   top: 26%;
   left: 41%;
   box-shadow: 0 0 2px 2px #fff;
-    z-index: 1;
+    z-index: 999;
 }
 
 .star14 {
@@ -258,7 +258,7 @@ section{
   top: 35%;
   left: 33%;
   box-shadow: 0 0 2px 2px #fff;
-    z-index: 1;
+    z-index: 999;
 }
 
 @keyframes starflashing {
@@ -280,7 +280,7 @@ section{
   background: #ffffff;
   border-radius: 50%;
   box-shadow: 0 0 5px 5px #BBE1FA;
-    z-index: 1;
+    z-index: 999;
 }
 
 .meteor:after {
