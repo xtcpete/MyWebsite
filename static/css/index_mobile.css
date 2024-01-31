@@ -55,7 +55,6 @@ body{
 }
 
 .container{
-    overflow-y: scroll;
     scroll-snap-type: y mandatory;
 }
 
@@ -388,7 +387,7 @@ section{
 
 .personal-info{
     position: absolute;
-    bottom: 6%;
+    bottom: 16%;
     margin-left: 6%;
     margin-right: 6%;
     min-width: 90%;
