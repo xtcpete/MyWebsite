@@ -376,8 +376,8 @@ section{
 }
 
 .personal-info{
-    position: absolute;
-    bottom: 20vh;
+    position: relative;
+    margin-top: 4%;
     max-height: 60vh;
     margin-left: 6%;
     color: #EEEEEE;
