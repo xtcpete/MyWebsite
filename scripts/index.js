@@ -147,7 +147,7 @@ function isInViewport(element) {
 }
 
 function showContact() {
-    window.alert("Email: " + info['Contact']['Email'] + "\nPhone: " + info['Contact']['Phone'])
+    window.alert("Email: " + info_data['Contact']['Email'] + "\nPhone: " + info_data['Contact']['Phone'])
 };
 
 document.addEventListener("wheel", (event) => {
