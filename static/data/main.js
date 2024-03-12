@@ -87,7 +87,7 @@ var main = [
             "0": {
                 "Demo": false,
                 "Description": "PyTorch implementation of transformer with greedy search algorithm for calculating accuracy metrics",
-                "id": "https: //github.com/xtcpete/transformer_with_greedy_search",
+                "id": "https://github.com/xtcpete/transformer_with_greedy_search",
                 "Skills": "NLP,Pytorch,Deep Learning",
                 "Title": "Transformer with greedy search"
             },
