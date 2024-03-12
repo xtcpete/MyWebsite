@@ -14,7 +14,9 @@ $(document).ready(function () {
     document.getElementById("banner").innerHTML = "<img class=\"banner-img\" id=\"banner-img\" src=" + summary.imgPath + ">";
     var header = document.getElementById("header")
     header.innerHTML += "<div class=\"title\">" + summary.Title;
-    header.innerHTML += "<div class=\"comment\" style=\"font-weight: normal;\">" + summary.Comment + "</div></div>"
+    if (summary.Comment != undefined){
+        header.innerHTML += "<div class=\"comment\" style=\"font-weight: normal;\">" + summary.Comment + "</div></div>"
+    }
     header.innerHTML += "<div class=\"company\">" + summary.Company + "</div>"
     header.innerHTML += "<div class=\"date\">" + summary.Date + "</div>"
 

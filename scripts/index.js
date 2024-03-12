@@ -106,9 +106,14 @@ $(document).ready(function () {
         "</div>" + "<div class='container-fluid content-holder'>" + "<div class='inner-content'>" + 
         "<div class='info-holder'>" + "<div class='date-category'>" + exp['Date'] + 
         "<br>" + exp['Location'] + "</div>" + "</div>" + "<h3 class='title'>" + exp['Title'] +
-         "</h3>" + "<h4 class='company'>" + exp['Company'] + "<h5 class='comment'>" + exp['Comment'] + 
-         "</h5>" + "</h4>" + "<div class='description'>" + "Skills: " + exp['Skills'] + "</div>" + "</div>" 
-         + "</div>" + "</div>" + "</div>"
+        "</h3>" + "<h4 class='company'>" + exp['Company']
+
+        if (exp['Comment'] != undefined) {
+            exp_card += "<h5 class='comment'>" + exp['Comment'] + "</h5>"
+        }
+        
+        exp_card += "</h4>" + "<div class='description'>" + "Skills: " + exp['Skills'] + "</div>" + "</div>" 
+        + "</div>" + "</div>" + "</div>"
         experience_wrapper.innerHTML += exp_card
     }
 

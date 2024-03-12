@@ -692,13 +692,15 @@ h2{
 .company {
     position: relative;
     margin: 10px 0 0px 0;
-    height: 2em;
+    height: fit-content;
+    margin-bottom: 20px;
     color: black;
 }
 
 .comment{
     position: relative;
     margin: 10px 0 0px 0;
+    font-style: italic;
     color: black;
 }
 
