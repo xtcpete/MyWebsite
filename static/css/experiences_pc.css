@@ -68,13 +68,19 @@ body{
     margin-bottom: 15px;
 }
 
+.comment{
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
 .company{
-    font-size: 1em;
+    font-size: 1.4em;
     font-weight: bold;
 }
 
 .date{
     float: right;
+    font-size: 1.2rem;
     font-weight: normal;
 }
 
@@ -92,12 +98,13 @@ body{
 .summary-title{
     font-weight: bold;
     margin-bottom: 10px;
-    font-size: 1.1em;
+    font-size: 1.3rem;
     width: 100%;
 }
 
 .summary-point{
     margin-top: 15px;
+    font-size: 1.2rem;
 }
 
 .skill-holder{
@@ -110,14 +117,14 @@ body{
     text-align: right;
     font-weight: bold;
     margin-bottom: 10px;
-    font-size: 1.1em;
+    font-size: 1.3rem;
     width: 100%;
 }
 
 .skill{
     text-align: right;
     width: 100%;
-    font-size: 0.9em;
+    font-size: 1.2rem;
     margin-bottom: 5px;
     cursor: pointer;
 }
@@ -131,8 +138,13 @@ body{
 .supervisor-title{
     font-weight: bold;
     margin-bottom: 10px;
-    font-size: 1.1em;
+    font-size: 1.3rem;
     width: 100%;
+}
+
+.supervisor-name{
+    font-size: 1.2rem;
+    margin-bottom: 5px;
 }
 
 .about-holder{
@@ -143,8 +155,13 @@ body{
 .about-title{
     font-weight: bold;
     margin-bottom: 10px;
-    font-size: 1.1em;
+    font-size: 1.3rem;
     width: 100%;
+}
+
+.about{
+    font-size: 1.2rem;
+    margin-bottom: 5px;
 }
 
 .supportive-holder{
@@ -155,7 +172,7 @@ body{
 .supportive-title{
     font-weight: bold;
     margin-bottom: 10px;
-    font-size: 1.1em;
+    font-size: 1.3em;
     width: 100%;
 }
 

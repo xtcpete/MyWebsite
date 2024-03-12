@@ -386,9 +386,16 @@ section{
   animation: meteorflashing 6s infinite linear 1s;
 }
 
+.person-wrapper{
+  height: 90%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
 .personal-info{
-    position: absolute;
-    bottom: 12vh;
+    position: relative;
+    margin-top: 10%;
     margin-left: 6%;
     margin-right: 6%;
     min-width: 90%;
@@ -400,7 +407,7 @@ section{
     position: relative;
     margin-bottom: 20px;
     margin-top: 20px;
-    font-size: 3.5em;
+    font-size: 5em;
     font-weight: bolder;
 }
 
