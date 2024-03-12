@@ -356,7 +356,7 @@ def catch_all_put(db='root', socketio=None):
 def get_chat_response(message):
     headers = {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer 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'
+        'Authorization': ''
     }
 
     data = {
