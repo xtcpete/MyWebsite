@@ -401,7 +401,7 @@ section{
 
 .personal-info{
     position: absolute;
-    bottom: 100px;
+    bottom: 10%;
     margin-top: 10%;
     margin-left: 6%;
     margin-right: 6%;
@@ -478,6 +478,7 @@ h2{
     width: 60%;
     height: 50%;
     z-index: 0;
+    display: none;
 }
 
 .resume-button{
@@ -1088,10 +1089,10 @@ h2{
 
 /*-------------------- Chat --------------------*/
 .chat {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 5%;
-  bottom: 12%;
+  bottom: 18%;
   width: 90%;
   height: 100vh;
   max-height: 1200px;
@@ -1536,8 +1537,8 @@ h2{
 }
 
 .robot_button{
-  position: absolute;
-  bottom: 5%;
+  position: fixed;
+  bottom: 10%;
   right: 5%;
   z-index: 999;
   border-radius: 100px;

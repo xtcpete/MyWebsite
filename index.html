@@ -343,7 +343,12 @@
 
         function showHover(){
             var tooltip = document.getElementsByClassName("tooltiptext")[0];
-            tooltip.style.visibility = "visible";
+            if (isMobileDevice()){
+                tooltip.style.visibility = "hidden";
+            }
+            else{
+                tooltip.style.visibility = "visible";
+            }
         }
 
         function hideHover(){
