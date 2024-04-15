@@ -15,7 +15,7 @@ var main = [
                 "Company": "University of California, Davis",
                 "Date": "Dec. 2019 - Mar. 2020",
                 "Location": "Davis, California",
-                "Skills": "R, ggplot2, Scikit-learn, Data Visualization, Regression, Time Series Analysis",
+                "Skills": "R, ggplot2, Scikit-learn, Data Visualization, Time Series Analysis",
                 "Title": "Undergraduate Research Assistant",
                 "id": "experience.html?UCDLAWR",
                 "imgPath": "static/imgs/ucdavis.png"
@@ -60,7 +60,7 @@ var main = [
             },
             "Highlight": "I am an incoming Ph.D student @ USC's Vision & Graphics Lab (VGL) advised by Prof. Yajie Zhao. I am interested in 3D scene reconstruction, object detection. I also play with NLP.",
             "Links": {
-                "Github": "https: //github.com/xtcpete",
+                "Github": "https://github.com/xtcpete",
                 "Instagram": "https://instagram.com/xtcpete?igshid=NTc4MTIwNjQ2YQ==",
                 "LinkedIn": "https://www.linkedin.com/in/xtcpetecgl"
             },
