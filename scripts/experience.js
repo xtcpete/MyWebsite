@@ -27,7 +27,7 @@ $(document).ready(function () {
     var skillDiv = document.getElementById("skills");
     for (i in skills) {
         var skill = skills[i];
-        html = "<div class=\"skill\", id=\""+ skill+ "\" onclick=\"location.href=\"" + "https://www.google.com/search?q=" + skill + "\"     ><i><u>" + skill + "</u></i></div>";
+        html = "<div class=\"skill\", id=\""+ skill+ "\" onclick=\"location.href='https://www.google.com/search?q=" + String(skill) + "'\"><i><u>" + skill + "</u></i></div>";
         skillDiv.innerHTML += html; 
         console.log(html);
     }

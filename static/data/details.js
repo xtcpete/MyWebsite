@@ -100,7 +100,7 @@ var details = [
             },
             "Supervisor": {
                 "Email": "https://www.yajie-zhao.com",
-                "Name": "Yajie Zhao"
+                "Name": "Prof. Yajie Zhao"
             },
             "id": "4",
             "imgPath": "static/imgs/ict.jpg",

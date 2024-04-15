@@ -5,6 +5,7 @@ var projects_data = main[3]['Projects']
 
 
 $(document).ready(function () {
+
     var usrlang = navigator.language
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
@@ -67,14 +68,14 @@ $(document).ready(function () {
     var entries = info_data['keySkills'].split(',')
     // make entries to dictionary
     for (var i in entries) {
-        entries[i] = { label: entries[i] }
+        entries[i] = { label: entries[i], url: 'https://www.google.com/search?q=' + entries[i] }
     }
 
 
     var settings = {
         entries: entries,
-        width: 700,
-        height: 700,
+        width: '100%',
+        height: '100%',
         radius: '50%',
         radiusMin: 75,
         bgDraw: true,
@@ -83,8 +84,8 @@ $(document).ready(function () {
         opacityOut: 0.05,
         opacitySpeed: 5,
         fov: 800,
-        speed: 0.5,
-        fontSize: '30',
+        speed: 0.3,
+        fontSize: '2.5vh',
         fontColor: '#00ADB5',
         fontWeight: 'bold',
         fontStyle: 'normal',
@@ -165,7 +166,9 @@ document.addEventListener("wheel", (event) => {
         Array.from(buttons).forEach(function (button) {
             const id = button.id.split('_')[0]
             const el = document.getElementById(id)
-
+            if (el == null) {
+                return false
+            }
             button.style.background = 'None'
             button.style.color = 'gray'
             if (isInViewport(el)) {
@@ -222,13 +225,15 @@ function openMenu() {
     Array.from(buttons).forEach(function (button) {
         const id = button.id.split('_')[0]
         const el = document.getElementById(id)
-        if (isInViewport(el)) {
-            button.style.background = el.style.background
-            button.style.color = 'white'
-        }
-        else {
-            button.style.background = 'None'
-            button.style.color = 'gray'
+        if (el != null) {
+            if (isInViewport(el)) {
+                button.style.background = el.style.background
+                button.style.color = 'white'
+            }
+            else {
+                button.style.background = 'None'
+                button.style.color = 'gray'
+            }
         }
     })
 

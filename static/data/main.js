@@ -58,26 +58,26 @@ var main = [
                 "Email": "xtcpetecgl@gmail.com",
                 "Phone": "530-750-9653"
             },
-            "Highlight": "Hello, I am a data science student with extensive experience in AI, ML, research, and web development, and I am actively seeking a position starting next Fall.",
+            "Highlight": "I am an incoming Ph.D student @ USC's Vision & Graphics Lab (VGL) advised by Prof. Yajie Zhao. I am interested in 3D scene reconstruction, object detection. I also play with NLP.",
             "Links": {
                 "Github": "https: //github.com/xtcpete",
                 "Instagram": "https://instagram.com/xtcpete?igshid=NTc4MTIwNjQ2YQ==",
                 "LinkedIn": "https://www.linkedin.com/in/xtcpetecgl"
             },
             "Name": "Gonglin Chen",
-            "keySkills": "Python,R,SQL,Java,Linux,Spark,Pytorch,TensorFlow,Caffe,Scikit-learn,AWS,MongoDB,Machine Learning,Computer Vision"
+            "keySkills": "Python,R,SQL,Spark,Pytorch,TensorFlow,Caffe,AWS,MongoDB,Machine Learning,Computer Vision,Feature Matching,3D Reconstruction,3D Vision"
         }
     },
     {
         "Education": {
             "0": {
                 "Date": "July 2017 \u2013 June 2022",
-                "Degree": "Bachelor of Science in Statistics, Machine Learning",
+                "Degree": "BS in Statistics, Machine Learning",
                 "School": "University of California, Davis"
             },
             "1": {
-                "Date": "January 2023 \u2013 June 2024 (Expected)",
-                "Degree": "Master of Science in Applied Data Science",
+                "Date": "January 2023 \u2013 May 2024",
+                "Degree": "MS in Applied Data Science",
                 "School": "University of Southern California"
             }
         }
