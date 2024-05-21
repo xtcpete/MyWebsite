@@ -124,7 +124,7 @@ section {
   position: relative;
   animation: starflashing 3s infinite;
   top: 35%;
-  left: 20%;
+  left: 40%;
   box-shadow: 0 0 2px 2px #fff;
   z-index: 999;
 }
@@ -137,7 +137,7 @@ section {
   position: relative;
   animation: starflashing 3s infinite 0.5s;
   top: 40%;
-  left: 10%;
+  left: 60%;
   box-shadow: 0 0 2px 2px #fff;
   z-index: 999;
 }
@@ -176,7 +176,7 @@ section {
   position: relative;
   animation: starflashing 3s infinite 0.3s;
   top: 15%;
-  left: 20%;
+  left: 80%;
   box-shadow: 0 0 2px 2px #fff;
   z-index: 999;
 }
@@ -267,7 +267,7 @@ section {
   position: relative;
   animation: starflashing 3s infinite 0.1s;
   top: 35%;
-  left: 33%;
+  left: 54%;
   box-shadow: 0 0 2px 2px #fff;
   z-index: 999;
 }
@@ -631,9 +631,10 @@ h2 {
   display: inline-flex;
   position: relative;
   height: 90%;
+  max-height: 50em;
   width: 25em;
   border-radius: 20px;
-  margin-right: 30px;
+  margin-right: 2em;
   margin-top: 30px;
   transition: opacity 0.2s ease, box-shadow 0.2s ease, transform 330ms ease-in-out;
   opacity: 1;

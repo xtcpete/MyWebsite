@@ -38,11 +38,11 @@ $(document).ready(function () {
     if (isMobileDevice()) {
         console.log('mobile')
         document.getElementById("container").style.height = "100vh"
-        document.getElementById("exp-cards-list").style.width = Object.keys(experiences_data).length * 55 + "em"
+        document.getElementById("exp-cards-list").style.width = Object.keys(experiences_data).length * 60 + "em"
     }
     else{
         document.getElementById("container").style.height = "100vh"
-        document.getElementById("exp-cards-list").style.width = Object.keys(experiences_data).length * 35 + "em"
+        document.getElementById("exp-cards-list").style.width = Object.keys(experiences_data).length * 27 + "em"
     }
 
     var education_wrapper = document.getElementById('education-wrapper')
