@@ -6,9 +6,11 @@
 
 html {
   scroll-behavior: smooth;
- }
+  overflow-x: hidden;
+}
 
 body{
+    position: fixed;
     width: 100%;
     height: 100%;
     margin: 0;
@@ -749,24 +751,28 @@ h2{
     margin-bottom: 10%;
     margin-top: 10%;
     width: 100%;
-    height: 50%;
+    height: 55%;
     float: left;
     display: flex;
     z-index: 1;
 }
 
 .demo-wrapper{
+    position: absolute;
+    top:0;
     display: inline-block;
-    width: 42.5%;
-    margin-left: 5%;
+    width: 100%;
+    margin-left: 10%;
     margin-right: 0;
-    height: 100%;
+    height: 46%;
 }
 
 .nodemo-wrapper{
+    position: absolute;
+    top: 50%;
     display: inline-block;
-    width: 42.5%;
-    height: 100%;
+    width: 100%;
+    height: 46%;
     margin-left: 10%;
 }
 
