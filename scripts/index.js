@@ -182,6 +182,28 @@ document.addEventListener("wheel", (event) => {
     }, 400);
 });
 
+document.addEventListener("touchend", (event) => {
+    var wheeling
+    clearTimeout(wheeling);
+    const buttons = document.getElementsByTagName('button')
+    wheeling = setTimeout(function () {
+        wheeling = undefined;
+        Array.from(buttons).forEach(function (button) {
+            const id = button.id.split('_')[0]
+            const el = document.getElementById(id)
+            if (el == null) {
+                return false
+            }
+            button.style.background = 'None'
+            button.style.color = 'gray'
+            if (isInViewport(el)) {
+                button.style.background = el.style.background
+                button.style.color = 'white'
+            }
+        })
+    }, 400);
+});
+
 function navigateTo(el) {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
