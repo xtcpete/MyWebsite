@@ -11,8 +11,8 @@ html {
 
 body{
     position: fixed;
-    width: 101%;
-    height: 101%;
+    width: 105%;
+    height: 105%;
     margin: 0;
     overflow-x: hidden;
 }
@@ -408,7 +408,7 @@ section{
     margin-top: 10%;
     margin-left: 6%;
     margin-right: 6%;
-    min-width: 90%;
+    width: 85%;
     color: #EEEEEE;
     z-index: 1;
 }
