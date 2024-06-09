@@ -3,7 +3,6 @@ var info_data = main[1]['Info']
 var education_data = main[2]['Education']
 var projects_data = main[3]['Projects']
 
-
 $(document).ready(function () {
 
     var usrlang = navigator.language
@@ -40,10 +39,12 @@ $(document).ready(function () {
         console.log('mobile')
         document.getElementById("container").style.height = "100vh"
         document.getElementById("exp-cards-list").style.width = Object.keys(experiences_data).length * 55 + "em"
+        viewportMeta.setAttribute('content', 'width=device-width, initial-scale=0.4, user-scalable=no');
     }
     else{
         document.getElementById("container").style.height = "100vh"
         document.getElementById("exp-cards-list").style.width = Object.keys(experiences_data).length * 27 + "em"
+        viewportMeta.setAttribute('content', 'width=device-width, initial-scale=0.8, user-scalable=no');
     }
 
     var education_wrapper = document.getElementById('education-wrapper')

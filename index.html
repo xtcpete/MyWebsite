@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.8, user-scalable=no">
     <meta name="apple-touch-fullscreen" content="yes" />
     <link rel= "stylesheet" type= "text/css" media="screen and (min-device-width:641px)" href= "./static/css/index_pc.css">
     <link rel= "stylesheet" type= "text/css" media="screen and (max-device-width:640px)" href= "./static/css/index_mobile.css">
@@ -38,7 +39,7 @@
             <button class="nev-button" id="projects_button" onClick="navigateTo(projects)"></button>
         </div>
 
-        <section class="chat">
+        <div class="chat">
             <div class="chat-title">
                 <h1>Gonglin Chen's</h1>
                 <h2>Assistant</h2>
@@ -54,7 +55,7 @@
                 <textarea type="text" class="message-input" placeholder="Type message..."></textarea>
                 <button type="submit" class="message-submit" id="send_button">Send</button>
             </div>
-        </section>
+        </div>
 
         <button type="submit" class="robot_button" onclick="showChat()" onmouseover="showHover()" onmouseout="hideHover()">
             <img src="./static/imgs/robot.png" alt="buttonpng" border="0" />
