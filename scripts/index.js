@@ -37,11 +37,9 @@ $(document).ready(function () {
     if (isMobileDevice()) {
         console.log('mobile')
         document.getElementById("container").style.height = "100vh"
-        document.getElementById("exp-cards-list").style.width = Object.keys(experiences_data).length * 55 + "em"
     }
     else{
         document.getElementById("container").style.height = "100vh"
-        document.getElementById("exp-cards-list").style.width = Object.keys(experiences_data).length * 27 + "em"
     }
 
     var education_wrapper = document.getElementById('education-wrapper')
@@ -95,9 +93,6 @@ $(document).ready(function () {
     $('.animated-cloud').svg3DTagCloud(settings);
 
     experience_wrapper = document.getElementById('exp-cards-list')
-
-    experience_wrapper.innerHTML+="<div class=\"rightScroll\" onclick=\"scrollThumb('Go_R')\"><text style=\"font-size: 20px\"><</text></div>"
-
     for (var i = Object.keys(experiences_data).length-1; i >= 0; i--) {
         var exp = experiences_data[String(i)]
         console.log(exp)
@@ -116,9 +111,6 @@ $(document).ready(function () {
         + "</div>" + "</div>" + "</div>"
         experience_wrapper.innerHTML += exp_card
     }
-
-    experience_wrapper.innerHTML+="<div class=\"leftScroll\" onclick=\"scrollThumb('Go_L')\"><text style=\"font-size: 20px\">></text></div>"
-
 
     var projects_demo = document.getElementById('projects-demo')
     var projects_nodemo = document.getElementById('projects-nodemo')
@@ -220,24 +212,6 @@ function navigateTo(el) {
             button.style.color = 'gray'
         }
     })
-}
-
-function scrollThumb(direction) {
-    console.log(direction)
-    if (direction == 'Go_L') {
-        $('.list-wrapper').animate({
-            scrollLeft: "+=" + 1000 + "em"
-        }, function () {
-            // createCookie('scrollPos', $('#slide-wrap').scrollLeft());
-        });
-    } else
-        if (direction == 'Go_R') {
-            $('.list-wrapper').animate({
-                scrollLeft: "-=" + 1000 + "em"
-            }, function () {
-                // createCookie('scrollPos', $('#slide-wrap').scrollLeft());
-            });
-        }
 }
 
 function openMenu() {

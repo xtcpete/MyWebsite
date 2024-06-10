@@ -593,18 +593,29 @@ h2 {
 
 .list-wrapper {
   overflow: auto;
-  height: 100vh;
-  margin-left: 5%;
-  margin-right: 5%;
+  display: flex;
+  height: 70%;
+  margin-left: 6%;
+  margin-right: 6%;
   margin-bottom: 10%;
 }
 
 .cards-list {
-  height: 68%;
-  padding: 15px 15px 15px;
-  overflow: hidden;
-  margin: auto;
+  display: inline-flex;
+  height: 100%;
+  overflow-x: scroll;
 }
+  /* Hide scrollbar for Chrome, Safari and Opera */
+.cards-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.cards-list {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 
 @keyframes card-ani {
   0% {
@@ -630,12 +641,11 @@ h2 {
 .card {
   display: inline-flex;
   position: relative;
-  height: 90%;
-  max-height: 50em;
-  width: 25em;
+  max-height: 70em;
+  min-width: 25em;
   border-radius: 20px;
-  margin-right: 2em;
-  margin-top: 30px;
+  margin-right: 3em;
+  margin-top: 40px;
   transition: opacity 0.2s ease, box-shadow 0.2s ease, transform 330ms ease-in-out;
   opacity: 1;
   z-index: 1;
