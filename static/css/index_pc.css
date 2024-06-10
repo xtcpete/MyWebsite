@@ -581,9 +581,11 @@ h2 {
 
 .experience-title {
   color: #F4EEFF;
+  width: 90%;
 }
 
 .experience-description {
+  width: 90%;
   margin-left: 6%;
   font-size: 1.5em;
   color: #A6B1E1;

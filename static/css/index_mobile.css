@@ -554,10 +554,12 @@ h2{
 .experience-title{
     color: #F4EEFF;
     font-size: 4em;
+    width: 90%;
 }
 
 .experience-description{
     margin-left: 6%;
+    width: 90%;
     font-size: 3.5em;
     color: #A6B1E1;
     font-weight: bold;
@@ -575,7 +577,7 @@ h2{
 
 .cards-list {
     display: inline-flex;
-    height: 90%;
+    height: 100%;
     overflow-x: scroll;
 }
 
