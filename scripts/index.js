@@ -200,7 +200,7 @@ document.addEventListener("touchend", (event) => {
                 button.style.color = 'white'
             }
         })
-    }, 400);
+    }, 100);
 });
 
 function navigateTo(el) {
