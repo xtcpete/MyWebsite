@@ -558,12 +558,12 @@ h2{
 .experience-title{
     color: #F4EEFF;
     font-size: 4em;
-    width: 90%;
+    width: 80%;
 }
 
 .experience-description{
     margin-left: 6%;
-    width: 90%;
+    width: 88%;
     font-size: 3.5em;
     color: #A6B1E1;
     font-weight: bold;
@@ -574,14 +574,14 @@ h2{
     overflow: auto;
     display: flex;
     height: 60%;
-    margin-left: 6%;
-    margin-right: 6%;
     margin-bottom: 10%;
 }
 
 .cards-list {
     display: inline-flex;
     height: 100%;
+    margin-left: 6%;
+    margin-right: 6%;
     overflow-x: scroll;
 }
 
@@ -737,7 +737,7 @@ h2{
 
 .projects-header{
     margin-left: 6%;
-    width: 90%;
+    width: 88%;
     height: fit-content;
 }
 
