@@ -74,23 +74,24 @@ section {
   height: 100%;
   width: 100%;
   color: white;
+  width: calc(100% + 1px);
   overflow: hidden;
   scroll-snap-align: start;
 }
 
 #home {
   position: relative;
-  right: 0px;
+  right: -1px;
 }
 
 #experiences {
   position: relative;
-  right: 0px;
+  right: -1px;
 }
 
 #projects {
   position: relative;
-  right: 0px;
+  right: -1px;
 }
 
 .star1 {

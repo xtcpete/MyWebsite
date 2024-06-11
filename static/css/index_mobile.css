@@ -14,23 +14,22 @@ html {
 body{
     display: flex;
     width: 100%;
-    right: 0px;
     height: 100%;
     margin: 0;
 }
 
 .header{
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
-    margin: 0;
-    background-color: whitesmoke;
-    opacity: 0.8;
-    min-height: 8%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  margin: 0;
+  background-color: whitesmoke;
+  opacity: 0.8;
+  min-height: 8%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .header-text{
@@ -81,11 +80,12 @@ body{
     top: 0;
     background-color: rgba(50, 50, 50, 0.9);
     z-index: 999;
-}
+} 
 
 section{
     height: 100%;
     margin:0;
+    width: calc(100% + 1px);
     overflow: hidden;
     scroll-snap-align: start;
 }
