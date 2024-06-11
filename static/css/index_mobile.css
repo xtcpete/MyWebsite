@@ -90,12 +90,15 @@ section{
 
 #home{
     position: relative;
+    right: 0px;
 }
 #experiences{
     position: relative;
+    right: 0px;
 }
 #projects{
     position: relative;
+    right: 0px;
 }
 
 .star{
