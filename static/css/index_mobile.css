@@ -84,23 +84,22 @@ body{
 
 section{
     height: 100%;
-    margin:0;
-    width: calc(100% + 1px);
-    overflow: hidden;
+    width: 100%;
+    overflow-x: hidden;
     scroll-snap-align: start;
 }
 
 #home{
     position: relative;
-    right: -1px;
+    margin: 0;
 }
 #experiences{
     position: relative;
-    right: -1px;
+    margin: 0;
 }
 #projects{
     position: relative;
-    right: -1px;
+    margin: 0;
 }
 
 .star{
