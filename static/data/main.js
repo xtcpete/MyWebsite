@@ -16,7 +16,7 @@ var main = [
                 "Date": "Dec. 2019 - Mar. 2020",
                 "Location": "Davis, California",
                 "Skills": "R, ggplot2, Scikit-learn, Data Visualization, Time Series Analysis",
-                "Title": "Undergraduate Research Assistant",
+                "Title": "Research Assistant",
                 "id": "experience.html?UCDLAWR",
                 "imgPath": "static/imgs/ucdavis.png"
             },
@@ -36,7 +36,7 @@ var main = [
                 "Date": "Jan. 2022 - Jun. 2022",
                 "Location": "Davis, California",
                 "Skills": "TensorFlow, Python",
-                "Title": "Undergraduate Research Assistant",
+                "Title": "Research Assistant",
                 "id": "experience.html?UCDPhysics",
                 "imgPath": "static/imgs/ucdavis.png"
             },
@@ -45,7 +45,7 @@ var main = [
                 "Company": "USC Institute for Creative Technologies",
                 "Date": "Jun. 2023 - Present",
                 "Location": "Los Angeles, California",
-                "Skills": "PyTorch, Computer Vision",
+                "Skills": "PyTorch, Computer Vision, Feature Matching, 3D Reconstruction, 3D Vision",
                 "Title": "Research Assistant", 
                 "id": "experience.html?USCict",
                 "imgPath": "static/imgs/ict.jpg"
