@@ -66,18 +66,6 @@ body {
   scroll-snap-type: y mandatory;
 }
 
-#header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1%;
-  border: 1px black solid;
-  position: sticky;
-  top: 0;
-  background-color: rgba(50, 50, 50, 0.9);
-  z-index: 999;
-}
-
 section {
   height: 100%;
   color: white;
