@@ -583,7 +583,7 @@ h2{
     overflow: auto;
     display: flex;
     height: 60%;
-    margin-bottom: 10%;
+    margin-bottom: 0%;
 }
 
 .cards-list {
