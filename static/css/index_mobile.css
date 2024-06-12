@@ -577,6 +577,7 @@ h2{
     height: 100%;
     margin-left: 6%;
     margin-right: 6%;
+    padding: 10px;
     overflow-x: scroll;
 }
 
