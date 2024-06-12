@@ -133,158 +133,158 @@ section{
 }
 
 .star3 {
-  width: 1px;
-  height: 1px;
-  border-radius: 50%;
-  background: #ffffff;
-  position: relative;
-  animation: starflashing 3s infinite;
-  top: 35%;
-  left: 20%;
-  box-shadow: 0 0 2px 2px #fff;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    background: #ffffff;
+    position: relative;
+    animation: starflashing 3s infinite;
+    top: 35%;
+    left: 20%;
+    box-shadow: 0 0 2px 2px #fff;
     z-index: 1;
 }
 
 .star4 {
-  width: 2px;
-  height: 2px;
-  border-radius: 50%;
-  background: #ffffff;
-  position: relative;
-  animation: starflashing 3s infinite 0.5s;
-  top: 40%;
-  left: 10%;
-  box-shadow: 0 0 2px 2px #fff;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background: #ffffff;
+    position: relative;
+    animation: starflashing 3s infinite 0.5s;
+    top: 40%;
+    left: 10%;
+    box-shadow: 0 0 2px 2px #fff;
     z-index: 1;
 }
 
 .star5 {
-  width: 1px;
-  height: 1px;
-  border-radius: 50%;
-  background: #ffffff;
-  position: relative;
-  animation: starflashing 2s infinite;
-  top: 12%;
-  left: 44%;
-  box-shadow: 0 0 2px 2px #fff;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    background: #ffffff;
+    position: relative;
+    animation: starflashing 2s infinite;
+    top: 12%;
+    left: 44%;
+    box-shadow: 0 0 2px 2px #fff;
     z-index: 1;
 }
 
 .star6 {
-  width: 1px;
-  height: 1px;
-  border-radius: 50%;
-  background: #ffffff;
-  position: relative;
-  animation: starflashing 3s infinite;
-  top: 10%;
-  left: 60%;
-  box-shadow: 0 0 2px 2px #fff;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    background: #ffffff;
+    position: relative;
+    animation: starflashing 3s infinite;
+    top: 10%;
+    left: 60%;
+    box-shadow: 0 0 2px 2px #fff;
     z-index: 1;
 }
 
 .star7 {
-  width: 2px;
-  height: 2px;
-  border-radius: 50%;
-  background: #ffffff;
-  position: relative;
-  animation: starflashing 3s infinite 0.3s;
-  top: 15%;
-  left: 20%;
-  box-shadow: 0 0 2px 2px #fff;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background: #ffffff;
+    position: relative;
+    animation: starflashing 3s infinite 0.3s;
+    top: 15%;
+    left: 20%;
+    box-shadow: 0 0 2px 2px #fff;
     z-index: 1;
 }
 
 .star8 {
-  width: 2px;
-  height: 2px;
-  border-radius: 50%;
-  background: #ffffff;
-  position: relative;
-  animation: starflashing 3s infinite;
-  top: 5%;
-  left: 78%;
-  box-shadow: 0 0 2px 2px #fff;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background: #ffffff;
+    position: relative;
+    animation: starflashing 3s infinite;
+    top: 5%;
+    left: 78%;
+    box-shadow: 0 0 2px 2px #fff;
     z-index: 1;
 }
 
 .star9 {
-  width: 2px;
-  height: 2px;
-  border-radius: 50%;
-  background: #ffffff;
-  position: relative;
-  animation: starflashing 2s infinite;
-  top: 38%;
-  left: 60%;
-  box-shadow: 0 0 2px 2px #fff;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background: #ffffff;
+    position: relative;
+    animation: starflashing 2s infinite;
+    top: 38%;
+    left: 60%;
+    box-shadow: 0 0 2px 2px #fff;
     z-index: 1;
 }
 
 .star10 {
-  width: 1px;
-  height: 1px;
-  border-radius: 50%;
-  background: #ffffff;
-  position: relative;
-  animation: starflashing 3s infinite 0.1s;
-  top: 8%;
-  left: 82%;
-  box-shadow: 0 0 2px 2px #fff;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    background: #ffffff;
+    position: relative;
+    animation: starflashing 3s infinite 0.1s;
+    top: 8%;
+    left: 82%;
+    box-shadow: 0 0 2px 2px #fff;
     z-index: 1;
 }
 
 .star11 {
-  width: 1px;
-  height: 1px;
-  border-radius: 50%;
-  background: #ffffff;
-  position: relative;
-  animation: starflashing 2s infinite 0.3s;
-  top: 33%;
-  left: 45%;
-  box-shadow: 0 0 2px 2px #fff;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    background: #ffffff;
+    position: relative;
+    animation: starflashing 2s infinite 0.3s;
+    top: 33%;
+    left: 45%;
+    box-shadow: 0 0 2px 2px #fff;
     z-index: 1;
 }
 
 .star12 {
-  width: 2px;
-  height: 2px;
-  border-radius: 50%;
-  background: #ffffff;
-  position: relative;
-  animation: starflashing 3s infinite 0.2s;
-  top: 18%;
-  left: 60%;
-  box-shadow: 0 0 2px 2px #fff;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background: #ffffff;
+    position: relative;
+    animation: starflashing 3s infinite 0.2s;
+    top: 18%;
+    left: 60%;
+    box-shadow: 0 0 2px 2px #fff;
     z-index: 1;
 }
 
 .star13 {
-  width: 1px;
-  height: 1px;
-  border-radius: 50%;
-  background: #ffffff;
-  position: relative;
-  animation: starflashing 3s infinite 0.05s;
-  top: 26%;
-  left: 41%;
-  box-shadow: 0 0 2px 2px #fff;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    background: #ffffff;
+    position: relative;
+    animation: starflashing 3s infinite 0.05s;
+    top: 26%;
+    left: 41%;
+    box-shadow: 0 0 2px 2px #fff;
     z-index: 1;
 }
 
 .star14 {
-  width: 1px;
-  height: 1px;
-  border-radius: 50%;
-  background: #ffffff;
-  position: relative;
-  animation: starflashing 3s infinite 0.1s;
-  top: 35%;
-  left: 33%;
-  box-shadow: 0 0 2px 2px #fff;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    background: #ffffff;
+    position: relative;
+    animation: starflashing 3s infinite 0.1s;
+    top: 35%;
+    left: 33%;
+    box-shadow: 0 0 2px 2px #fff;
     z-index: 1;
 }
 
@@ -301,13 +301,13 @@ section{
 }
 
 .meteor {
-  position: relative;
-  width: 4px;
-  margin: 0;
-  height: 4px;
-  background: #ffffff;
-  border-radius: 50%;
-  box-shadow: 0 0 5px 5px #BBE1FA;
+    position: relative;
+    width: 4px;
+    margin: 0;
+    height: 4px;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 5px 5px #BBE1FA;
     z-index: 1;
 }
 
