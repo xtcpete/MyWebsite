@@ -58,7 +58,7 @@ var main = [
                 "Email": "xtcpetecgl@gmail.com",
                 "Phone": "530-750-9653"
             },
-            "Highlight": "I am an incoming Ph.D student @ USC's Vision & Graphics Lab (VGL) advised by Prof. Yajie Zhao. I am interested in 3D scene reconstruction, object detection. I also play with NLP.",
+            "Highlight": "I am a first year Ph.D student @ USC's Vision & Graphics Lab (VGL) advised by Prof. Yajie Zhao. I am interested in 3D scene reconstruction, object detection. I also play with NLP.",
             "Links": {
                 "Github": "https://github.com/xtcpete",
                 "Instagram": "https://instagram.com/xtcpete?igshid=NTc4MTIwNjQ2YQ==",

@@ -71,6 +71,7 @@ section {
   color: white;
   width: 100%;
   overflow-x: hidden;
+  overflow-y: hidden;
   scroll-snap-align: start;
 }
 
@@ -605,6 +606,7 @@ h2 {
   display: inline-flex;
   height: 100%;
   overflow-x: scroll;
+  overflow-y: hidden;
 }
   /* Hide scrollbar for Chrome, Safari and Opera */
 .cards-list::-webkit-scrollbar {
@@ -1059,7 +1061,7 @@ h2 {
 
 .end-note {
   position: relative;
-  bottom: 8%;
+  bottom: 10%;
   z-index: 999;
   width: 100%;
   text-align: center;
@@ -1077,7 +1079,7 @@ h2 {
   width: 400px;
   height: 80vh;
   max-height: 500px;
-  z-index: 2;
+  z-index: 999;
   overflow: hidden;
   box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
   background: linear-gradient(135deg, #044f48, #2a7561);

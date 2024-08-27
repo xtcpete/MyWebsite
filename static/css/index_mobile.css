@@ -81,6 +81,7 @@ section{
     height: 100vh;
     width: 100%;
     overflow-x: hidden;
+    overflow-y: hidden;
     scroll-snap-align: start;
 }
 
@@ -589,6 +590,7 @@ h2{
 .cards-list {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+  overflow-y: hidden;
 }
 
 @keyframes card-ani{
