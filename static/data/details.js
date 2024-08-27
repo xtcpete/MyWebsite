@@ -31,12 +31,11 @@ var details = [
             },
             "Summary": {
                 "0": "Worked collaboratively with a team of 6 engineers on multiple projects, including smart store, garbage classification, and facial recognition.",
-                "1": "Leveraged Python to augment image data, resulting in a 3% increase in model accuracy.",
+                "1": "Implemented scripts for data augmentation, improving the accuracy of the model by around 3%.",
                 "2": "Demonstrated a strong understanding of deep learning frameworks by reading and implementing YOLOv3's output layer, enabling local testing and reducing the time required for fine-tuning.",
                 "3": "Individually trained and deployed 4 models for demonstration purposes at the Fourth Digital China Summit.",
                 "4": "Developed comprehensive training, deployment, and testing procedures that were adopted by the department.",
-                "5": "Collectively prototyped existing projects using TensorFlow for updating our products. ",
-                "6": "Mentored and trained 2 new interns to ensure smooth onboarding and integration into the team."
+                "5": "Collectively prototyped existing projects using TensorFlow for updating our products. "
             },
             "Supervisor": {
                 "Email": "huangwenj@newland.com.cn",

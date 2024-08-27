@@ -35,7 +35,7 @@ $(document).ready(function () {
     supervisor_div = document.getElementById("supervisor");
     if ("Supervisor" in summary){
         console.log(summary.Supervisor);
-        supervisor_html = "<div class=\"supervisor-title\">My Supervisor:</div>"
+        supervisor_html = "<div class=\"supervisor-title\">Supervisor:</div>"
         supervisor_html += "<div class=\"supervisor-name\"><a href=\""+summary.Supervisor.Email + "\">" + summary.Supervisor.Name + "</a></div>"
         supervisor_div.innerHTML = supervisor_html;
     }
