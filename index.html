@@ -28,6 +28,7 @@
         <div class="header">
             <div class="header-text">XTCPETE</div>
             <button class="header-button" id="home_button" style="background: #1B262C; color: white" onClick="navigateTo(home)" ></button>
+            <!--<button class="header-button" id="publications_button" onClick="navigateTo(publications)"></button>-->
             <button class="header-button" id="experiences_button" onClick="navigateTo(experiences)"></button>
             <button class="header-button" id="projects_button" onClick="navigateTo(projects)"></button>
             <div class="nev" onClick="openMenu()">MENU</div>
@@ -35,6 +36,7 @@
         <div id="nev-page" style="display: none; height: fit-content; width: 100%; z-index: 999; position: fixed;
     top: 0; background: whitesmoke;">
             <button class="nev-button" id="home_button" style="background: #1B262C; color: white" onClick="navigateTo(home)" ></button>
+            <!--<button class="nev-button" id="publications_button" onClick="navigateTo(publications)"></button>-->
             <button class="nev-button" id="experiences_button" onClick="navigateTo(experiences)"></button>
             <button class="nev-button" id="projects_button" onClick="navigateTo(projects)"></button>
         </div>
@@ -111,11 +113,7 @@
                                 </div>
                             </div>
                             <div class="button-wrapper">
-                                <div class="resume-button" id='resume-button' onclick="window.location.href='./static/resume.pdf';">
-    
-                                </div>
-    
-                                <div class="resume-button" id='contact-button'onclick="showContact()">
+                                <div class="resume-button" id='resume-button' onClick="window.location.href='./static/resume.pdf';">
     
                                 </div>
                             </div>
@@ -130,25 +128,48 @@
             <div class="animated-cloud"></div>
             
         </section>
-
         
+        <!--
+        <section id="publications" style="background: #45474B;">
+            <h2 class="publications-title">Publications</h2>
+            <div class="publications-description">
+                Click on the cards to read more.
+            </div>
+            <div class="publications-wrapper">
+                <div class="publications-cards-list" id="publications-cards-list">
+                    
+                </div>
+            </div>
+        </section>
+        -->
+
         <section id="experiences" style="background: #424874;">
             <h2 class="experience-title">Experiences</h2>
             <div class="experience-description">
-                Take a look at what my experiences have prepared me for.
+                Click to on the cards to see details.
             </div>
             <div class="list-wrapper">
               <div class="cards-list" id="exp-cards-list">
                   
               </div>
             </div>
+
+            <div class="arrow_wrapper">
+                <div class="arrow-btn" onClick="scrollThumb('Left')">
+                    <div class="left-arrow" id="left-arrow"></div>
+                </div>
+                
+                <div class="arrow-btn" onClick="scrollThumb('Right')">
+                    <div class="right-arrow" id="right-arrow"></div>
+                </div>
+            </div>
+
         </section>
 
-        
         <section id="projects" style="background: #A75D5D">
             <div class="projects-header">
                 <h2 class="projects-title">Projects</h2>
-                <div class="projects-description">Explore the power of my expertise in problem-solving</div>
+                <div class="projects-description">Click on the cards to view deployed demos, Colab Notebooks, and GitHub repositories.</div>
             </div>
             <div class="projects-wrapper">
                 <div class="demo-wrapper">
@@ -194,7 +215,9 @@
     <div class="end-note">
         <div>© 2023, Gonglin Chen</div>
         <br>
+        
         <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fxtcpete.com&count_bg=%23D1988C&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
+        
     </div>
     
     </div>

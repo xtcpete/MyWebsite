@@ -94,8 +94,7 @@ var details = [
             "About": "The ICT Vision & Graphics Laboratory develops new techniques for creating and displaying photorealistic computer graphics of people, objects, and environments. We specialize in developing image-based methods for acquiring shape, reflectance, and motion from digital photography and video. The results are computer-generated virtual models which look and behave as realistically as possible, viewable from any viewpoint and in any illumination condition.",
             "Summary": {
                 "0": "Designed and implemented a pipeline GeoAmplifier using PyTorch based on transfomer architecture for feature matching between images with large scales and viewpoints change.",
-                "1": "Evaluated the performance of GeoAmplifier on various benchmarks and applied it to COLMAP for structure from motion.",
-                "2": "Gonglin, Chen, Jinsen Wu, Wenbin Teng, Zhiyuan Gao, Andrew Feng, Rongjun Qin, and Yajie Zhao, \u201cGeoAmplifier: Feature Matching Enhancement through Geometry-Aware Optimization\u201d."
+                "1": "Evaluated the performance of GeoAmplifier on various benchmarks and applied it to COLMAP for structure from motion."
             },
             "Supervisor": {
                 "Email": "https://www.yajie-zhao.com",

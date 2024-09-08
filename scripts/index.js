@@ -9,12 +9,9 @@ $(document).ready(function () {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const querylan = urlParams.get('lan')
-    var contact = document.getElementById('contact-button')
     var resume = document.getElementById('resume-button')
     var nev_buttons = document.getElementsByClassName("nev-button");
 
-
-    contact.innerText = 'Contact'
     resume.innerText = 'Resume'
     for (var i = 0; i < nev_buttons.length; i++) {
         if (nev_buttons[i].id == 'home_button') {
@@ -28,6 +25,7 @@ $(document).ready(function () {
         };
     }
     document.getElementById('home_button').innerText = 'Home'
+    //document.getElementById('publications_button').innerText = 'Publications'
     document.getElementById('experiences_button').innerText = 'Experiences'
     document.getElementById('projects_button').innerText = 'Projects'
 
@@ -95,7 +93,6 @@ $(document).ready(function () {
     experience_wrapper = document.getElementById('exp-cards-list')
     for (var i = Object.keys(experiences_data).length-1; i >= 0; i--) {
         var exp = experiences_data[String(i)]
-        console.log(exp)
         exp_card = "<div class='card' onclick=\"location.href='" + exp['id'] + "'\">" + "<div class='card-content'>" + "<div class='banner-holder'>" + 
         "<div class='banner' style='background-image: url(" + exp['imgPath'] + "); background-size: contain'></div>" + 
         "</div>" + "<div class='container-fluid content-holder'>" + "<div class='inner-content'>" + 
@@ -142,10 +139,6 @@ function isInViewport(element) {
     return center_x > 0 && center_x < window.innerWidth && center_y > 0 && center_y < window.innerHeight
 
 }
-
-function showContact() {
-    window.alert("Email: " + info_data['Contact']['Email'] + "\nPhone: " + info_data['Contact']['Phone'])
-};
 
 document.addEventListener("wheel", (event) => {
 
@@ -213,6 +206,65 @@ function navigateTo(el) {
         }
     })
 }
+
+function checkScrollLimits() {
+    const $cardsList = $('.cards-list');
+    const scrollLeft = $cardsList.scrollLeft();
+    const scrollWidth = $cardsList[0].scrollWidth;
+    const clientWidth = $cardsList[0].clientWidth;
+
+    // Check if there's room to scroll left
+    if (scrollLeft <= 0) {
+        $('#left-arrow-btn').addClass('disabled');
+    } else {
+        $('#left-arrow-btn').removeClass('disabled');
+    }
+
+    // Check if there's room to scroll right
+    if (scrollLeft + clientWidth >= scrollWidth) {
+        $('#right-arrow-btn').addClass('disabled');
+    } else {
+        $('#right-arrow-btn').removeClass('disabled');
+    }
+}
+
+function checkScrollLimits() {
+    const $cardsList = $('.cards-list');
+    const scrollLeft = $cardsList.scrollLeft();
+    const scrollWidth = $cardsList[0].scrollWidth;
+    const clientWidth = $cardsList[0].clientWidth;
+
+    // Check if there's room to scroll left
+    if (scrollLeft <= 0) {
+        document.getElementById('left-arrow').style.borderRight = "8px solid #bdbdbd";
+    } else {
+        document.getElementById('left-arrow').style.borderRight = "8px solid #424242";
+    }
+
+    // Check if there's room to scroll right
+    console.log(scrollLeft + clientWidth, scrollWidth)
+    if (scrollLeft + clientWidth >= scrollWidth - 10) {
+        document.getElementById('right-arrow').style.borderLeft = "8px solid #bdbdbd";
+    } else {
+        document.getElementById('right-arrow').style.borderLeft = "8px solid #424242";
+    }
+}
+
+function scrollThumb(direction) {
+    console.log(direction);
+    const scrollAmount = 1000; // Amount to scroll in pixels (adjust as needed)
+
+    if (direction === 'Left') {
+        $('.cards-list').animate({
+            scrollLeft: "-=" + scrollAmount
+        }, 500, checkScrollLimits);  // Adjust the duration as needed (500ms for example)
+    } else if (direction === 'Right') {
+        $('.cards-list').animate({
+            scrollLeft: "+=" + scrollAmount
+        }, 500, checkScrollLimits);  // Adjust the duration as needed
+    }
+}
+
 
 function openMenu() {
     // check what section is in view

@@ -83,20 +83,10 @@ section{
     overflow-x: hidden;
     overflow-y: hidden;
     scroll-snap-align: start;
+    position: relative;
+    margin: 0;
 }
 
-#home{
-    position: relative;
-    margin: 0;
-}
-#experiences{
-    position: relative;
-    margin: 0;
-}
-#projects{
-    position: relative;
-    margin: 0;
-}
 
 .star{
   margin: 0;
@@ -568,6 +558,7 @@ h2{
 
 .list-wrapper {
     overflow: auto;
+    overflow-y: hidden;
     display: flex;
     height: 60%;
     margin-bottom: 0%;
@@ -580,6 +571,10 @@ h2{
     margin-right: 6%;
     padding: 10px;
     overflow-x: scroll;
+}
+
+.arrow-wrapper{
+    display: none;
 }
 
 .cards-list::-webkit-scrollbar {
