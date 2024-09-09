@@ -2,9 +2,10 @@ var experiences_data = main[0]['Experiences']
 var info_data = main[1]['Info']
 var education_data = main[2]['Education']
 var projects_data = main[3]['Projects']
+var publications_data = main[4]['Publications']
 
 $(document).ready(function () {
-
+    
     var usrlang = navigator.language
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
@@ -17,6 +18,9 @@ $(document).ready(function () {
         if (nev_buttons[i].id == 'home_button') {
             nev_buttons[i].innerText = 'Home'
         }
+        else if (nev_buttons[i].id == 'publications_button') {
+            nev_buttons[i].innerText = 'Publications'
+        }
         else if (nev_buttons[i].id == 'experiences_button') {
             nev_buttons[i].innerText = 'Experiences'
         }
@@ -25,7 +29,7 @@ $(document).ready(function () {
         };
     }
     document.getElementById('home_button').innerText = 'Home'
-    //document.getElementById('publications_button').innerText = 'Publications'
+    document.getElementById('publications_button').innerText = 'Publications'
     document.getElementById('experiences_button').innerText = 'Experiences'
     document.getElementById('projects_button').innerText = 'Projects'
 
@@ -107,6 +111,18 @@ $(document).ready(function () {
         exp_card += "</h4>" + "<div class='description'>" + "Skills: " + exp['Skills'] + "</div>" + "</div>" 
         + "</div>" + "</div>" + "</div>"
         experience_wrapper.innerHTML += exp_card
+    }
+    
+    pub_cards= document.getElementById('pub_cards')
+    for (var i=Object.keys(publications_data).length-1; i>=0; i--){
+        pub = publications_data[String(i)]
+        console.log(pub['Journal'])
+        pub_card = '<li><a href="' + pub['id'] + '" class="pub_card"><img src="' + pub['Cover'] +'" class="pub_card__image" alt="" />' + 
+        '<div class="pub_card__overlay"><div class="pub_card__header">' + 
+        '<div class="pub_card__header-text"><h3 class="pub_card__title">' + pub['Title'] +'</h3><span class="pub_card__author">' + pub['Authors']  + '</span> <span class="pub_card__status">' + pub['Journal'] + ', ' + pub['Date'] + 
+        '</span></div></div><p class="pub_card__description">' + pub['Abstract'] + 
+        '</p></div></a></li>'
+        pub_cards.innerHTML += pub_card
     }
 
     var projects_demo = document.getElementById('projects-demo')

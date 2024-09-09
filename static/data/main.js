@@ -147,5 +147,27 @@ var main = [
                 "id": "demo/pet.html"
             }   
         }
-    }
+    },
+    {
+        "Publications": {
+            "0": {
+                "Authors": "Zitong Zhao; Gonglin Chen; Reza Vatan Meidanshahi; Gergely T. Zimányi",
+                "Date": "2023",
+                "Title": "Machine Learning-Based Defect Identification Method at the c-Si/a-Si: H Interface",
+                "Abstract": "Generation of defects leads to performance degradation of silicon solar cells. However, ab initio simulations of defect structures are constrained by system size, while the representative simulations of amorphous silicon (aSi) require a large amount of computation because of the wide distribution of relevant local structures. We propose a machine learning-based approach to replace the quantum mechanical ab initio calculations to identify defect formation in aSi-related structures. We demonstrate that with a correlated set of descriptors and a representative set of training data, the machine learning method can identify localized defects in structures containing Si-structures with high fidelity.",
+                "Journal": "IEEE 50th Photovoltaic Specialists Conference (PVSC)",
+                "id": "https://ieeexplore.ieee.org/abstract/document/10359905",
+                "Cover" : "./static/imgs/cSi-aSi.png"
+            },
+            "1": {
+                "Authors": "Gonglin Chen; Jinsen Wu; Haiwei Chen; Wenbin Teng; Zhiyuan Gao; Andrew Feng; Rongjun Qin; Yajie Zhao",
+                "Date": "2024",
+                "Title": "Geometry-aware Feature Matching for Large-Scale Structure from Motion",
+                "Abstract": "Establishing consistent and dense correspondences across multiple images is crucial for Structure from Motion (SfM) systems. Significant view changes, such as air-to-ground with very sparse view overlap, pose an even greater challenge to the correspondence solvers. We present a novel optimization-based approach that significantly enhances existing feature matching methods by introducing geometry cues in addition to color cues. This helps fill gaps when there is less overlap in large-scale scenarios. Our method formulates geometric verification as an optimization problem, guiding feature matching within detector-free methods and using sparse correspondences from detector-based methods as anchor points. By enforcing geometric constraints via the Sampson Distance, our approach ensures that the denser correspondences from detector-free methods are geometrically consistent and more accurate. This hybrid strategy significantly improves correspondence density and accuracy, mitigates multi-view inconsistencies, and leads to notable advancements in camera pose accuracy and point cloud density. It outperforms state-of-the-art feature matching methods on benchmark datasets and enables feature matching in challenging extreme large-scale settings.",
+                "Journal": "arXiv preprint",
+                "id": "https://arxiv.org/abs/2409.02310",
+                "Cover" : "./static/imgs/geomatcher.png"
+            },
+        }
+    },
 ]
