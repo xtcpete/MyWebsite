@@ -324,7 +324,7 @@
 
         async function query(msg) {
 
-            template =  "Please act as a personal assistant of Gonglin and use the following pieces of context to answer the question for Gonglin.\n\n" + JSON.stringify(details) + "\n\n" + JSON.stringify(main) + "\n\nQuestion: " + msg + "\n\nAnswer: "
+            template =  "Please act as a personal assistant who is representing Gonglin and use the following pieces of context to answer the question.\n\n" + JSON.stringify(details) + "\n\n" + JSON.stringify(main) + "\n\nQuestion: " + msg + "\n\nAnswer: "
 
             const GEMINI_API_KEY = 'AIzaSyD0G_35d9UxFv-0ylL0DqsDpLD7t57CmXE';
 
