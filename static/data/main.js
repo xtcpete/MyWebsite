@@ -168,6 +168,15 @@ var main = [
                 "id": "https://arxiv.org/abs/2409.02310",
                 "Cover" : "./static/imgs/geomatcher.png"
             },
+            "2": {
+                "Authors": "Zhiyuan Gao*; Wenbin Teng*; Gonglin Chen; Jinsen Wu; Ningli Xu; Rongjun Qin; Andrew Feng; Yajie Zhao",
+                "Date": "2024",
+                "Title": "Skyeyes: Ground Roaming using Aerial View Images",
+                "Abstract": "Integrating aerial imagery-based scene generation into applications like autonomous driving and gaming enhances realism in 3D environments, but challenges remain in creating detailed content for occluded areas and ensuring real-time, consistent rendering. In this paper, we introduce Skyeyes, a novel framework that can generate photorealistic sequences of ground view images using only aerial view inputs, thereby creating a ground roaming experience. More specifically, we combine a 3D representation with a view consistent generation model, which ensures coherence between generated images. A view consistency module ensures coherence between generated images. This method allows for the creation of geometrically consistent ground view images, even with large view gaps. The images maintain improved spatial-temporal coherence and realism, enhancing scene comprehension and visualization from aerial perspectives. As far as we have known, there are no publicly available datasets that contains pairwise geo-aligned aerial and ground view imagery. Therefore, we build a large, synthetic, and geo-aligned dataset using Unreal Engine. Both qualitative and quantitative analyses on this synthetic dataset display superior results compared to other leading synthesis approaches.",
+                "Journal": "arXiv preprint",
+                "id": "https://chaoren2357.github.io/website-skyeyes/",
+                "Cover" : "./static/imgs/skyeyes.png"
+            }
         }
     },
 ]
