@@ -4,9 +4,9 @@ var details = [
             "About": "Generation of defects leads to performance degradation of silicon solar cells. However, ab initio simulations of defect structures are constrained by system size, while the representative simulations of amouphous silicon (aSi) require a large amount of computation because of the wide distribution of relevant local structures. We propose a machine learning-based approach to replace the quantum mechanical ab initio calculations to identify defect formation in aSi-related structures. We demonstrate that with a correlated set of descriptors and a representative set of training data, the machine learning method can identify localized defects in structures containing Si-structures with high fidelity.",
             "Summary": {
                 "0": "Applied machine learning algorithms in the field of Physics, contributing to research and exploring new possibilities at the intersection of machine learning and Physics.",
-                "1": "Designed and trained models that can predicts whether electronic orbits get localized on a given atom using TensorFlow, and conducted experiments to evaluate their effectiveness.",
+                "1": "Designed and trained models that can predicts whether electronic orbits get localized on a given atom usingTensorFlow, and conducted experiments to evaluate their performance.",
                 "2": "Developed feature engineering scripts using Python for data cleaning and engineering.",
-                "3": "Z. Zhao, G. Chen, R. V. Meidanshahi, and G. T. Zim\u00b4anyi, \u201cMachine Learning-based defect identification method at the c-Si/a-Si:H interface\u201d, in Proceedings of the 50th IEEE Photovoltaic Specialists Conference (PVSC 50), San Juan, Puerto Rico, 2023."
+                "3": "Zitong Zhao,Gonglin Chen, Reza Vatan Meidanshahi, and Gergely T. Zim ́anyi, “Machine Learning-based defectidentification method at the c-Si/a-Si:H interface”, in Proceedings of the 50th IEEE Photovoltaic Specialists Conference,2023."
             },
             "Supervisor": {
                 "Email": "ztzhao@ucdavis.edu",
@@ -55,10 +55,9 @@ var details = [
         "UCDLAWR": {
             "About": "Local residents in the Tulare Lake basin have observed changes in climate over the last 20-30 years. The goal of this study is to determine whether these perceived changes in temperature and precipitation hold true for the last 30 years.",
             "Summary": {
-                "0": "Cleaned and engineered a large dataset of over 3 million records using R into daily, monthly, seasonal and annual subsets, ensuring data quality and accuracy for further analysis.",
-                "1": "Conducted statistical analysis using methods such as the Mann-Kendall Trend test and Time series analysis to investigate perceived changes in temperature and precipitation patterns in Tulare Lake over the past 30 years.",
-                "2": "Visualized the data using ggplot2, creating clear and informative graphs that helped to illustrate patterns and trends in the data.",
-                "3": "Interpreted the statistical results and provided insights on climate-related topics. These insights were adopted for public education to help increase awareness and understanding of climate-related issues."
+                "0": "Collected and analyzed data from climate monitoring stations for the past 30 years in central California to proveand visualize climate change in California using R",
+                "1": "Conducted statistical analysis using methods such as the Mann-Kendall Trend test and Time series analysis;interpreted the statistical results which were adopted for public education on climate-related issues.",
+                "2": "Visualized the data usingggplot2, creating clear and informative graphs that helped to illustrate patterns andtrends in the data.",
             },
             "Supervisor": {
                 "Email": "hdahlke@ucdavis.edu",
@@ -93,8 +92,10 @@ var details = [
         "USCict": {
             "About": "The ICT Vision & Graphics Laboratory develops new techniques for creating and displaying photorealistic computer graphics of people, objects, and environments. We specialize in developing image-based methods for acquiring shape, reflectance, and motion from digital photography and video. The results are computer-generated virtual models which look and behave as realistically as possible, viewable from any viewpoint and in any illumination condition.",
             "Summary": {
-                "0": "Designed and implemented a pipeline GeoAmplifier using PyTorch based on transfomer architecture for feature matching between images with large scales and viewpoints change.",
-                "1": "Evaluated the performance of GeoAmplifier on various benchmarks and applied it to COLMAP for structure from motion."
+                "0": "Lead the research project on feature matching for Structure from Motion Reconstruction.",
+                "1": "Participated in several research projects related to diffusion models, NeRF and 3D gaussian splatting",
+                "2": "Gonglin Chen, Jinsen Wu, Wenbin Teng, Zhiyuan Gao, Andrew Feng, Rongjun Qin, and Yajie Zhao, “Geometry-awareFeature Matching for Large-Scale Structure from Motion”, axriv preprint, 2024.",
+                "3": "Zhiyuan Gao, Wenbin Teng,Gonglin Chen, Jinsen Wu, Ningli Xu, Rongjun Qin, Andrew Feng, and Yajie Zhao,“Skyeyes:  Ground Roaming using Aerial View Images”, axriv preprint, 2024."
             },
             "Supervisor": {
                 "Email": "https://www.yajie-zhao.com",
