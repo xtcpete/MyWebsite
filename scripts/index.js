@@ -146,6 +146,7 @@ $(document).ready(function () {
         }
 
     }
+
 })
 
 function isInViewport(element) {
